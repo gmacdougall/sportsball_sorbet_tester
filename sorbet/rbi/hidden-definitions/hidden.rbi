@@ -2968,8 +2968,6 @@ class ActionController::TestCase
   include ::ActionDispatch::Assertions::ResponseAssertions
   include ::ActionDispatch::Assertions::RoutingAssertions
   include ::Turbolinks::Assertions
-  include ::Shoulda::Matchers::ActionController
-  include ::Shoulda::Matchers::Routing
   def _controller_class(); end
 
   def _controller_class=(_controller_class); end
@@ -3028,8 +3026,6 @@ end
 
 class ActionController::TestCase
   extend ::ActionController::TestCase::Behavior::ClassMethods
-  extend ::Shoulda::Matchers::ActionController
-  extend ::Shoulda::Matchers::Routing
   def self._controller_class(); end
 
   def self._controller_class=(value); end
@@ -22136,8 +22132,6 @@ class ActiveSupport::TestCase
   include ::ActiveSupport::Testing::TimeHelpers
   include ::ActiveSupport::Testing::FileFixtures
   include ::ActiveSupport::CurrentAttributes::TestHelper
-  include ::Shoulda::Matchers::ActiveModel
-  include ::Shoulda::Matchers::ActiveRecord
   include ::ActiveSupport::Testing::SetupAndTeardown
   def __callbacks(); end
 
@@ -22190,8 +22184,6 @@ class ActiveSupport::TestCase
   extend ::ActiveSupport::DescendantsTracker
   extend ::ActiveSupport::Testing::Declarative
   extend ::Rails::LineFiltering
-  extend ::Shoulda::Matchers::ActiveModel
-  extend ::Shoulda::Matchers::ActiveRecord
   def self.__callbacks(); end
 
   def self.__callbacks=(value); end
@@ -24768,9 +24760,19 @@ end
 class Bundler::Definition
   def dependencies_for(groups); end
 
+  def disable_multisource?(); end
+
   def most_specific_locked_platform(); end
 
   def requested_dependencies(); end
+end
+
+class Bundler::DepProxy
+  def clone(); end
+end
+
+class Bundler::DepProxy
+  def self.get_proxy(dep, platform); end
 end
 
 class Bundler::Dependency
@@ -24782,6 +24784,10 @@ class Bundler::Dependency
 end
 
 Bundler::Deprecate = Gem::Deprecate
+
+class Bundler::Dsl
+  def check_primary_source_safety(); end
+end
 
 class Bundler::Env
 end
@@ -24981,6 +24987,8 @@ class Bundler::GemHelper
 
   def base(); end
 
+  def build_checksum(built_gem_path=T.unsafe(nil)); end
+
   def build_gem(); end
 
   def built_gem_path(); end
@@ -24988,6 +24996,8 @@ class Bundler::GemHelper
   def clean?(); end
 
   def committed?(); end
+
+  def current_branch(); end
 
   def default_remote(); end
 
@@ -25162,20 +25172,12 @@ end
 
 class Bundler::LazySpecification
   def eql?(other); end
+
+  def platform_string(); end
 end
 
-class Bundler::Molinillo::DependencyGraph
-  include ::Enumerable
-end
-
-class Bundler::Molinillo::DependencyGraph::Log
-  extend ::Enumerable
-end
-
-class Bundler::Molinillo::DependencyGraph::Vertex
-  def _recursive_predecessors(vertices=T.unsafe(nil)); end
-
-  def _recursive_successors(vertices=T.unsafe(nil)); end
+module Bundler::Molinillo::SpecificationProvider
+  def dependencies_equal?(dependencies, other_dependencies); end
 end
 
 module Bundler::Plugin::API::Source
@@ -25216,6 +25218,8 @@ module Bundler::Plugin::API::Source
   def install_path(); end
 
   def installed?(); end
+
+  def local!(); end
 
   def name(); end
 
@@ -25317,14 +25321,25 @@ class Bundler::ProcessLock
   def self.lock(bundle_path=T.unsafe(nil)); end
 end
 
+class Bundler::Resolver
+  include ::Bundler::GemHelpers
+  def results_for(dependency, base); end
+end
+
 class Bundler::Resolver::SpecGroup
+  def activate_all_platforms!(); end
+
   def activated_platforms(); end
 
   def activated_platforms=(activated_platforms); end
 
-  def copy_for(platforms); end
+  def partitioned_dependency_names_for_activated_platforms(); end
 
   def sorted_activated_platforms(); end
+end
+
+class Bundler::Resolver::SpecGroup
+  def self.create_for(specs, all_platforms, specific_platform); end
 end
 
 class Bundler::Retry
@@ -25442,10 +25457,30 @@ class Bundler::Settings::Validator
   def self.validate!(key, value, settings); end
 end
 
+class Bundler::Source
+  def cached!(); end
+
+  def local!(); end
+
+  def remote!(); end
+end
+
 class Bundler::Source::Git
   def glob(); end
 
   def local?(); end
+end
+
+class Bundler::Source::Rubygems
+  def disable_multisource?(); end
+end
+
+class Bundler::SourceList
+  def disable_multisource?(); end
+
+  def global_path_source(); end
+
+  def merged_gem_lockfile_sections!(); end
 end
 
 class Bundler::SpecSet
@@ -25458,6 +25493,8 @@ class Bundler::StubSpecification
   def extensions(); end
 
   def gem_build_complete_path(); end
+
+  def manually_installed?(); end
 end
 
 class Bundler::Thor
@@ -26333,6 +26370,8 @@ end
 
 class Bundler::Thor::Shell::Color
   def are_colors_disabled?(); end
+
+  def are_colors_supported?(); end
 
   def diff_lcs_loaded?(); end
 
@@ -32017,6 +32056,14 @@ end
 
 class Gem::Requirement
   include ::Gem::Requirement::OrderIndependentComparison
+  include ::Gem::Requirement::CorrectHashForLambdaOperator
+end
+
+module Gem::Requirement::CorrectHashForLambdaOperator
+  def hash(); end
+end
+
+module Gem::Requirement::CorrectHashForLambdaOperator
 end
 
 module Gem::Requirement::OrderIndependentComparison
@@ -37826,6 +37873,11 @@ end
 module Pocky
 end
 
+module PredictionUi
+  extend ::T::Private::Methods::MethodHooks
+  extend ::T::Private::Methods::SingletonMethodHooks
+end
+
 module Predictions
 end
 
@@ -43545,6 +43597,437 @@ module Shoulda::Matchers::ActionController
   def use_before_action(callback); end
 end
 
+class Shoulda::Matchers::ActionController::CallbackMatcher
+  def callback_type(); end
+
+  def callbacks(); end
+
+  def controller(); end
+
+  def controller_class(); end
+
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(method_name, kind, callback_type); end
+
+  def kind(); end
+
+  def matches?(controller); end
+
+  def method_name(); end
+end
+
+class Shoulda::Matchers::ActionController::CallbackMatcher
+end
+
+class Shoulda::Matchers::ActionController::FilterParamMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(key); end
+
+  def matches?(_controller); end
+end
+
+class Shoulda::Matchers::ActionController::FilterParamMatcher
+end
+
+class Shoulda::Matchers::ActionController::FlashStore
+  def controller(); end
+
+  def controller=(controller); end
+
+  def empty?(*_, &_1); end
+
+  def has_key?(key); end
+
+  def has_value?(expected_value); end
+
+  def name(); end
+
+  def use_now!(); end
+end
+
+class Shoulda::Matchers::ActionController::FlashStore
+  def self.future(); end
+
+  def self.now(); end
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher
+  def action(); end
+
+  def actual_permitted_parameter_names(); end
+
+  def add_params(params); end
+
+  def context(); end
+
+  def controller(); end
+
+  def default_verb(); end
+
+  def description(); end
+
+  def double_collections_by_parameter_name(); end
+
+  def ensure_action_and_verb_present!(); end
+
+  def expectation(); end
+
+  def expected_permitted_parameter_names(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def for(action, options=T.unsafe(nil)); end
+
+  def format_parameter_names(parameter_names); end
+
+  def in_context(context); end
+
+  def initialize(expected_permitted_parameter_names); end
+
+  def matches?(controller); end
+
+  def on(subparameter_name); end
+
+  def parameter_names_as_sentence(); end
+
+  def parameters_double_registry(); end
+
+  def reality(); end
+
+  def request_params(); end
+
+  def stubbed_params=(stubbed_params); end
+
+  def subparameter_name(); end
+
+  def unpermitted_parameter_names(); end
+
+  def verb(); end
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher::ActionNotDefinedError
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher::ActionNotDefinedError
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher::CompositeParametersDoubleRegistry
+  def parameters_double_registries(); end
+
+  def permitted_parameter_names(options=T.unsafe(nil)); end
+
+  def register(); end
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher::CompositeParametersDoubleRegistry
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher::ParametersDoubleRegistry
+  def double_collections_by_parameter_name(); end
+
+  def initialize(params); end
+
+  def params(); end
+
+  def permitted_parameter_names(args=T.unsafe(nil)); end
+
+  def register(); end
+  TOP_LEVEL = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher::ParametersDoubleRegistry
+  def self.permitted_parameter_names_within(double_collection); end
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher::VerbNotDefinedError
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher::VerbNotDefinedError
+end
+
+class Shoulda::Matchers::ActionController::PermitMatcher
+end
+
+class Shoulda::Matchers::ActionController::RedirectToMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def in_context(context); end
+
+  def initialize(url_or_description, context, &block); end
+
+  def matches?(controller); end
+end
+
+class Shoulda::Matchers::ActionController::RedirectToMatcher
+end
+
+class Shoulda::Matchers::ActionController::RenderTemplateMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def in_context(context); end
+
+  def initialize(options, message, context); end
+
+  def matches?(controller); end
+end
+
+class Shoulda::Matchers::ActionController::RenderTemplateMatcher
+end
+
+class Shoulda::Matchers::ActionController::RenderWithLayoutMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def in_context(context); end
+
+  def initialize(expected_layout); end
+
+  def matches?(controller); end
+end
+
+class Shoulda::Matchers::ActionController::RenderWithLayoutMatcher
+end
+
+class Shoulda::Matchers::ActionController::RescueFromMatcher
+  def controller(); end
+
+  def description(); end
+
+  def exception(); end
+
+  def expectation(); end
+
+  def expected_method(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def handler_exists?(); end
+
+  def handlers(); end
+
+  def initialize(exception); end
+
+  def matches?(controller); end
+
+  def method_name_matches?(); end
+
+  def rescues_from_exception?(); end
+
+  def with(method); end
+end
+
+class Shoulda::Matchers::ActionController::RescueFromMatcher
+end
+
+class Shoulda::Matchers::ActionController::RespondWithMatcher
+  def correct_status_code?(); end
+
+  def correct_status_code_range?(); end
+
+  def description(); end
+
+  def expectation(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(status); end
+
+  def matches?(controller); end
+
+  def response_code(); end
+
+  def symbol_to_status_code(potential_symbol); end
+end
+
+class Shoulda::Matchers::ActionController::RespondWithMatcher
+end
+
+class Shoulda::Matchers::ActionController::RouteMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def in_context(context); end
+
+  def initialize(context, method, path, port: T.unsafe(nil)); end
+
+  def matches?(controller); end
+
+  def to(*args); end
+end
+
+class Shoulda::Matchers::ActionController::RouteMatcher
+end
+
+class Shoulda::Matchers::ActionController::RouteParams
+  def args(); end
+
+  def controller_and_action_given_as_string?(); end
+
+  def extract_params_from_string(); end
+
+  def initialize(args); end
+
+  def normalize(); end
+
+  def normalize_values(hash); end
+
+  def stringify(value); end
+
+  def stringify_params(); end
+
+  def symbolize_or_stringify(key, value); end
+  PARAMS_TO_SYMBOLIZE = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActionController::RouteParams
+end
+
+class Shoulda::Matchers::ActionController::SessionStore
+  def controller(); end
+
+  def controller=(controller); end
+
+  def empty?(); end
+
+  def has_key?(key); end
+
+  def has_value?(expected_value); end
+
+  def name(); end
+end
+
+class Shoulda::Matchers::ActionController::SessionStore
+end
+
+class Shoulda::Matchers::ActionController::SetFlashMatcher
+  def [](key); end
+
+  def description(*args, &block); end
+
+  def expected_value(); end
+
+  def failure_message(*args, &block); end
+
+  def failure_message_for_should(*args, &block); end
+
+  def failure_message_for_should_not(*args, &block); end
+
+  def failure_message_when_negated(*args, &block); end
+
+  def in_context(context); end
+
+  def key(); end
+
+  def matches?(*args, &block); end
+
+  def now(); end
+
+  def to(expected_value=T.unsafe(nil), &block); end
+
+  def underlying_matcher(); end
+end
+
+class Shoulda::Matchers::ActionController::SetFlashMatcher::QualifierOrderError
+end
+
+class Shoulda::Matchers::ActionController::SetFlashMatcher::QualifierOrderError
+end
+
+class Shoulda::Matchers::ActionController::SetFlashMatcher
+  extend ::Forwardable
+end
+
+class Shoulda::Matchers::ActionController::SetSessionMatcher
+  def [](key); end
+
+  def description(*args, &block); end
+
+  def failure_message(*args, &block); end
+
+  def failure_message_for_should(*args, &block); end
+
+  def failure_message_for_should_not(*args, &block); end
+
+  def failure_message_when_negated(*args, &block); end
+
+  def in_context(context); end
+
+  def matches?(*args, &block); end
+
+  def to(expected_value=T.unsafe(nil), &block); end
+
+  def underlying_matcher(); end
+end
+
+class Shoulda::Matchers::ActionController::SetSessionMatcher
+  extend ::Forwardable
+end
+
+class Shoulda::Matchers::ActionController::SetSessionOrFlashMatcher
+  def [](key); end
+
+  def context(); end
+
+  def controller(); end
+
+  def description(); end
+
+  def expected_value(); end
+
+  def failure_message(); end
+
+  def failure_message_for_should(); end
+
+  def failure_message_for_should_not(); end
+
+  def failure_message_when_negated(); end
+
+  def in_context(context); end
+
+  def initialize(store); end
+
+  def key(); end
+
+  def matches?(controller); end
+
+  def store(); end
+
+  def to(expected_value=T.unsafe(nil), &block); end
+end
+
+class Shoulda::Matchers::ActionController::SetSessionOrFlashMatcher
+end
+
 module Shoulda::Matchers::ActionController
 end
 
@@ -43570,6 +44053,756 @@ module Shoulda::Matchers::ActiveModel
   def validate_numericality_of(attr); end
 
   def validate_presence_of(attr); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher
+  include ::Shoulda::Matchers::ActiveModel::Helpers
+  include ::Shoulda::Matchers::ActiveModel::Qualifiers::IgnoringInterferenceByWriter
+  def _after_setting_value(&callback); end
+
+  def after_setting_value_callback(); end
+
+  def attribute_changed_value_message=(attribute_changed_value_message); end
+
+  def attribute_to_check_message_against(); end
+
+  def attribute_to_set(); end
+
+  def context(); end
+
+  def description(); end
+
+  def does_not_match?(instance); end
+
+  def expected_message(); end
+
+  def expects_custom_validation_message?(); end
+
+  def expects_strict?(); end
+
+  def failure_message(); end
+
+  def failure_message_preface=(failure_message_preface); end
+
+  def failure_message_when_negated(); end
+
+  def for(attribute_name); end
+
+  def initialize(*values); end
+
+  def instance(); end
+
+  def last_attribute_setter_used(); end
+
+  def last_value_set(); end
+
+  def matches?(instance); end
+
+  def model(); end
+
+  def on(context); end
+
+  def options(); end
+
+  def result(); end
+
+  def simple_description(); end
+
+  def strict(expects_strict=T.unsafe(nil)); end
+
+  def values_to_preset(); end
+
+  def values_to_preset=(values_to_preset); end
+
+  def values_to_set(); end
+
+  def with_message(message, given_options=T.unsafe(nil)); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeChangedValueError
+  def attribute_name(); end
+
+  def attribute_name=(attribute_name); end
+
+  def matcher_name(); end
+
+  def matcher_name=(matcher_name); end
+
+  def model(); end
+
+  def model=(model); end
+
+  def successful?(); end
+
+  def value_read(); end
+
+  def value_read=(value_read); end
+
+  def value_written(); end
+
+  def value_written=(value_written); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeChangedValueError
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeDoesNotExistError
+  def attribute_name(); end
+
+  def attribute_name=(attribute_name); end
+
+  def model(); end
+
+  def model=(model); end
+
+  def successful?(); end
+
+  def value(); end
+
+  def value=(value); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeDoesNotExistError
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSetter
+  def after_set_callback(); end
+
+  def args(); end
+
+  def attribute_changed_value?(); end
+
+  def attribute_name(); end
+
+  def check(); end
+
+  def checked?(); end
+
+  def description(); end
+
+  def failure_message(); end
+
+  def initialize(args); end
+
+  def matcher_name(); end
+
+  def object(); end
+
+  def result_of_checking(); end
+
+  def result_of_setting(); end
+
+  def run(); end
+
+  def run!(); end
+
+  def set(); end
+
+  def set!(); end
+
+  def set?(); end
+
+  def successful?(); end
+
+  def successfully_checked?(); end
+
+  def successfully_set?(); end
+
+  def unsuccessful?(); end
+
+  def unsuccessfully_checked?(); end
+
+  def value_read(); end
+
+  def value_written(); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSetter
+  def self.set(args); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSetterAndValidator
+  def after_setting_value_callback(*args, &block); end
+
+  def allow_value_matcher(); end
+
+  def attribute_name(); end
+
+  def attribute_setter(); end
+
+  def attribute_setter_description(); end
+
+  def attribute_to_check_message_against(*args, &block); end
+
+  def context(*args, &block); end
+
+  def expected_message(*args, &block); end
+
+  def expects_strict?(*args, &block); end
+
+  def ignore_interference_by_writer(*args, &block); end
+
+  def initialize(allow_value_matcher, attribute_name, value); end
+
+  def instance(*args, &block); end
+
+  def validator(); end
+
+  def value(); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSetterAndValidator
+  extend ::Forwardable
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSetters
+  include ::Enumerable
+  def each(&block); end
+
+  def first_failing(); end
+
+  def initialize(allow_value_matcher, values); end
+
+  def tuples(); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSetters
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSettersAndValidators
+  include ::Enumerable
+  def each(&block); end
+
+  def first_failing(); end
+
+  def first_passing(); end
+
+  def initialize(allow_value_matcher, values); end
+
+  def tuples(); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSettersAndValidators
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::SuccessfulCheck
+  def successful?(); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::SuccessfulCheck
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::SuccessfulSetting
+  def successful?(); end
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher::SuccessfulSetting
+end
+
+class Shoulda::Matchers::ActiveModel::AllowValueMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::CouldNotDetermineValueOutsideOfArray
+end
+
+class Shoulda::Matchers::ActiveModel::CouldNotDetermineValueOutsideOfArray
+end
+
+class Shoulda::Matchers::ActiveModel::CouldNotSetPasswordError
+  def model(); end
+
+  def model=(model); end
+end
+
+class Shoulda::Matchers::ActiveModel::CouldNotSetPasswordError
+  def self.create(model); end
+end
+
+class Shoulda::Matchers::ActiveModel::DisallowValueMatcher
+  def _after_setting_value(*args, &block); end
+
+  def allow_matcher(); end
+
+  def attribute_changed_value_message=(*args, &block); end
+
+  def attribute_to_set(*args, &block); end
+
+  def description(*args, &block); end
+
+  def does_not_match?(subject); end
+
+  def expects_strict?(*args, &block); end
+
+  def failure_message(); end
+
+  def failure_message_preface(*args, &block); end
+
+  def failure_message_preface=(*args, &block); end
+
+  def failure_message_when_negated(); end
+
+  def for(attribute); end
+
+  def ignore_interference_by_writer(*args, &block); end
+
+  def ignoring_interference_by_writer(value=T.unsafe(nil)); end
+
+  def initialize(value); end
+
+  def last_attribute_setter_used(*args, &block); end
+
+  def last_value_set(*args, &block); end
+
+  def matches?(subject); end
+
+  def model(*args, &block); end
+
+  def on(context); end
+
+  def simple_description(*args, &block); end
+
+  def strict(strict=T.unsafe(nil)); end
+
+  def values_to_preset=(*args, &block); end
+
+  def with_message(message, options=T.unsafe(nil)); end
+end
+
+class Shoulda::Matchers::ActiveModel::DisallowValueMatcher
+  extend ::Forwardable
+end
+
+class Shoulda::Matchers::ActiveModel::HaveSecurePasswordMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def initialize(attribute); end
+
+  def matches?(subject); end
+
+  def subject(); end
+
+  def validate(); end
+  CORRECT_PASSWORD = ::T.let(nil, ::T.untyped)
+  INCORRECT_PASSWORD = ::T.let(nil, ::T.untyped)
+  MESSAGES = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveModel::HaveSecurePasswordMatcher
+end
+
+module Shoulda::Matchers::ActiveModel::Helpers
+  def default_error_message(type, options=T.unsafe(nil)); end
+
+  def format_validation_errors(errors); end
+
+  def pretty_error_messages(object); end
+end
+
+module Shoulda::Matchers::ActiveModel::Helpers
+end
+
+class Shoulda::Matchers::ActiveModel::NonNullableBooleanError
+  def attribute(); end
+
+  def attribute=(attribute); end
+end
+
+class Shoulda::Matchers::ActiveModel::NonNullableBooleanError
+  def self.create(attribute); end
+end
+
+module Shoulda::Matchers::ActiveModel::NumericalityMatchers
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::ComparisonMatcher
+  def comparison_description(); end
+
+  def for(attribute); end
+
+  def initialize(numericality_matcher, value, operator); end
+
+  def simple_description(); end
+
+  def with_message(message); end
+  ERROR_MESSAGES = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::ComparisonMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::EvenNumberMatcher
+  def simple_description(); end
+
+  def wrap_disallow_value_matcher(matcher); end
+  NON_EVEN_NUMBER_VALUE = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::EvenNumberMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::NumericTypeMatcher
+  def allowed_type_adjective(); end
+
+  def allowed_type_name(); end
+
+  def attribute(); end
+
+  def diff_to_compare(); end
+
+  def disallowed_value(); end
+
+  def does_not_match?(*args, &block); end
+
+  def expects_custom_validation_message?(*args, &block); end
+
+  def expects_strict?(*args, &block); end
+
+  def failure_message(*args, &block); end
+
+  def failure_message_when_negated(*args, &block); end
+
+  def ignore_interference_by_writer(*args, &block); end
+
+  def ignoring_interference_by_writer(*args, &block); end
+
+  def initialize(numeric_type_matcher, attribute); end
+
+  def matches?(*args, &block); end
+
+  def on(*args, &block); end
+
+  def strict(*args, &block); end
+
+  def with_message(*args, &block); end
+
+  def wrap_disallow_value_matcher(_matcher); end
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::NumericTypeMatcher
+  extend ::Forwardable
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::OddNumberMatcher
+  def simple_description(); end
+
+  def wrap_disallow_value_matcher(matcher); end
+  NON_ODD_NUMBER_VALUE = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::OddNumberMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::OnlyIntegerMatcher
+  def simple_description(); end
+
+  def wrap_disallow_value_matcher(matcher); end
+  NON_INTEGER_VALUE = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveModel::NumericalityMatchers::OnlyIntegerMatcher
+end
+
+module Shoulda::Matchers::ActiveModel::NumericalityMatchers
+end
+
+module Shoulda::Matchers::ActiveModel::Qualifiers
+end
+
+module Shoulda::Matchers::ActiveModel::Qualifiers::AllowNil
+  def allow_nil(); end
+
+  def expects_to_allow_nil?(); end
+
+  def initialize(*args); end
+end
+
+module Shoulda::Matchers::ActiveModel::Qualifiers::AllowNil
+end
+
+class Shoulda::Matchers::ActiveModel::Qualifiers::IgnoreInterferenceByWriter
+  def always?(); end
+
+  def changed?(); end
+
+  def condition(); end
+
+  def considering?(value); end
+
+  def default_to(argument); end
+
+  def initialize(argument=T.unsafe(nil)); end
+
+  def never?(); end
+
+  def set(argument); end
+
+  def setting(); end
+end
+
+class Shoulda::Matchers::ActiveModel::Qualifiers::IgnoreInterferenceByWriter
+end
+
+module Shoulda::Matchers::ActiveModel::Qualifiers::IgnoringInterferenceByWriter
+  def ignore_interference_by_writer(); end
+
+  def ignoring_interference_by_writer(value=T.unsafe(nil)); end
+
+  def initialize(*_); end
+end
+
+module Shoulda::Matchers::ActiveModel::Qualifiers::IgnoringInterferenceByWriter
+end
+
+module Shoulda::Matchers::ActiveModel::Qualifiers
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateAbsenceOfMatcher
+  def simple_description(); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateAbsenceOfMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateAcceptanceOfMatcher
+  def simple_description(); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateAcceptanceOfMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateConfirmationOfMatcher
+  include ::Shoulda::Matchers::ActiveModel::Helpers
+  def confirmation_attribute(); end
+
+  def simple_description(); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateConfirmationOfMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateExclusionOfMatcher
+  def in_array(array); end
+
+  def in_range(range); end
+
+  def simple_description(); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateExclusionOfMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateInclusionOfMatcher
+  def allow_nil(); end
+
+  def expects_to_allow_nil?(); end
+
+  def in_array(array); end
+
+  def in_range(range); end
+
+  def simple_description(); end
+
+  def with_high_message(message); end
+
+  def with_low_message(message); end
+
+  def with_message(message); end
+  ARBITRARY_OUTSIDE_DATE = ::T.let(nil, ::T.untyped)
+  ARBITRARY_OUTSIDE_DATETIME = ::T.let(nil, ::T.untyped)
+  ARBITRARY_OUTSIDE_DECIMAL = ::T.let(nil, ::T.untyped)
+  ARBITRARY_OUTSIDE_INTEGER = ::T.let(nil, ::T.untyped)
+  ARBITRARY_OUTSIDE_STRING = ::T.let(nil, ::T.untyped)
+  ARBITRARY_OUTSIDE_TIME = ::T.let(nil, ::T.untyped)
+  BLANK_VALUES = ::T.let(nil, ::T.untyped)
+  BOOLEAN_ALLOWS_BOOLEAN_MESSAGE = ::T.let(nil, ::T.untyped)
+  BOOLEAN_ALLOWS_NIL_MESSAGE = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateInclusionOfMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateLengthOfMatcher
+  include ::Shoulda::Matchers::ActiveModel::Helpers
+  def allow_nil(); end
+
+  def is_at_least(length); end
+
+  def is_at_most(length); end
+
+  def is_equal_to(length); end
+
+  def simple_description(); end
+
+  def with_long_message(message); end
+
+  def with_message(message); end
+
+  def with_short_message(message); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateLengthOfMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateNumericalityOfMatcher
+  include ::Shoulda::Matchers::ActiveModel::Qualifiers::IgnoringInterferenceByWriter
+  def allow_nil(); end
+
+  def description(); end
+
+  def diff_to_compare(); end
+
+  def does_not_match?(subject); end
+
+  def even(); end
+
+  def expects_custom_validation_message?(); end
+
+  def expects_strict?(); end
+
+  def expects_to_allow_nil?(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def given_numeric_column?(); end
+
+  def initialize(attribute); end
+
+  def is_equal_to(value); end
+
+  def is_greater_than(value); end
+
+  def is_greater_than_or_equal_to(value); end
+
+  def is_less_than(value); end
+
+  def is_less_than_or_equal_to(value); end
+
+  def is_other_than(value); end
+
+  def matches?(subject); end
+
+  def odd(); end
+
+  def on(context); end
+
+  def only_integer(); end
+
+  def simple_description(); end
+
+  def strict(); end
+
+  def with_message(message); end
+  DEFAULT_DIFF_TO_COMPARE = ::T.let(nil, ::T.untyped)
+  NUMERIC_NAME = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveModel::ValidateNumericalityOfMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::ValidatePresenceOfMatcher
+  include ::Shoulda::Matchers::ActiveModel::Qualifiers::AllowNil
+  def initialize(attribute); end
+
+  def simple_description(); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidatePresenceOfMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::ValidationMatcher
+  include ::Shoulda::Matchers::ActiveModel::Qualifiers::IgnoringInterferenceByWriter
+  def allow_blank(); end
+
+  def allow_blank_does_not_match?(); end
+
+  def allow_blank_matches?(); end
+
+  def allow_value_matcher(value, message=T.unsafe(nil), &block); end
+
+  def allows_value_of(value, message=T.unsafe(nil), &block); end
+
+  def attribute(); end
+
+  def context(); end
+
+  def description(); end
+
+  def disallow_value_matcher(value, message=T.unsafe(nil), &block); end
+
+  def disallows_value_of(value, message=T.unsafe(nil), &block); end
+
+  def does_not_match?(subject); end
+
+  def expects_custom_validation_message?(); end
+
+  def expects_strict?(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(attribute); end
+
+  def last_submatcher_run(); end
+
+  def matches?(subject); end
+
+  def model(); end
+
+  def on(context); end
+
+  def strict(); end
+
+  def subject(); end
+
+  def with_message(expected_message); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidationMatcher::BuildDescription
+  def call(); end
+
+  def initialize(matcher, main_description); end
+
+  def main_description(); end
+
+  def matcher(); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidationMatcher::BuildDescription
+  def self.call(matcher, main_description); end
+end
+
+class Shoulda::Matchers::ActiveModel::ValidationMatcher
+end
+
+class Shoulda::Matchers::ActiveModel::Validator
+  include ::Shoulda::Matchers::ActiveModel::Helpers
+  def all_formatted_validation_error_messages(); end
+
+  def attribute(); end
+
+  def call(); end
+
+  def captured_validation_exception?(); end
+
+  def context(); end
+
+  def has_messages?(); end
+
+  def initialize(record, attribute, options=T.unsafe(nil)); end
+
+  def record(); end
+
+  def type_of_message_matched?(); end
+
+  def validation_exception_message(); end
+end
+
+class Shoulda::Matchers::ActiveModel::Validator
 end
 
 module Shoulda::Matchers::ActiveModel
@@ -43607,6 +44840,925 @@ module Shoulda::Matchers::ActiveRecord
   def serialize(name); end
 
   def validate_uniqueness_of(attr); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AcceptNestedAttributesForMatcher
+  def allow_destroy(allow_destroy); end
+
+  def allow_destroy_correct?(); end
+
+  def config(); end
+
+  def description(); end
+
+  def exists?(); end
+
+  def expectation(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(name); end
+
+  def limit(limit); end
+
+  def limit_correct?(); end
+
+  def matches?(subject); end
+
+  def model_class(); end
+
+  def model_config(); end
+
+  def should_or_should_not(value); end
+
+  def update_only(update_only); end
+
+  def update_only_correct?(); end
+
+  def verify_option_is_correct(option, failure_message); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AcceptNestedAttributesForMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatcher
+  def actual_foreign_key(); end
+
+  def add_submatcher(matcher_class, *args); end
+
+  def associated_class(*_, &_1); end
+
+  def association_exists?(); end
+
+  def autosave(autosave); end
+
+  def autosave_correct?(); end
+
+  def belongs_foreign_key_missing?(); end
+
+  def belongs_to_required_by_default?(); end
+
+  def class_exists?(); end
+
+  def class_has_foreign_key?(klass); end
+
+  def class_name(class_name); end
+
+  def class_name_correct?(); end
+
+  def column_names_for(klass); end
+
+  def conditions(conditions); end
+
+  def conditions_correct?(); end
+
+  def counter_cache(counter_cache=T.unsafe(nil)); end
+
+  def dependent(dependent); end
+
+  def description(); end
+
+  def expectation(); end
+
+  def failing_submatchers(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def foreign_key_correct?(); end
+
+  def foreign_key_exists?(); end
+
+  def foreign_key_failure_message(klass, foreign_key); end
+
+  def foreign_key_reflection(); end
+
+  def has_column?(klass, column); end
+
+  def has_foreign_key_missing?(); end
+
+  def index_errors(index_errors); end
+
+  def index_errors_correct?(); end
+
+  def initialize(macro, name); end
+
+  def inverse_of(inverse_of); end
+
+  def join_table(join_table_name); end
+
+  def join_table_correct?(); end
+
+  def join_table_matcher(); end
+
+  def join_table_name(); end
+
+  def macro(); end
+
+  def macro_correct?(); end
+
+  def macro_description(); end
+
+  def macro_supports_primary_key?(); end
+
+  def matches?(subject); end
+
+  def missing(); end
+
+  def missing_options(); end
+
+  def missing_options_for_failing_submatchers(); end
+
+  def model_class(*_, &_1); end
+
+  def name(); end
+
+  def option_verifier(); end
+
+  def optional(optional=T.unsafe(nil)); end
+
+  def options(); end
+
+  def order(order); end
+
+  def polymorphic?(*_, &_1); end
+
+  def primary_key_correct?(klass); end
+
+  def primary_key_exists?(); end
+
+  def reflection(*_, &_1); end
+
+  def reflector(); end
+
+  def remove_submatcher(matcher_class); end
+
+  def required(required=T.unsafe(nil)); end
+
+  def source(source); end
+
+  def subject(); end
+
+  def submatchers(); end
+
+  def submatchers_match?(); end
+
+  def through(through); end
+
+  def through?(*_, &_1); end
+
+  def touch(touch=T.unsafe(nil)); end
+
+  def touch_correct?(); end
+
+  def validate(validate=T.unsafe(nil)); end
+
+  def validate_correct?(); end
+
+  def validate_foreign_key(klass); end
+
+  def validate_inverse_of_through_association(); end
+
+  def with_foreign_key(foreign_key); end
+
+  def with_primary_key(primary_key); end
+
+  def without_validating_presence(); end
+  MACROS = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatcher
+end
+
+module Shoulda::Matchers::ActiveRecord::AssociationMatchers
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::CounterCacheMatcher
+  def counter_cache(); end
+
+  def counter_cache=(counter_cache); end
+
+  def description(); end
+
+  def initialize(counter_cache, name); end
+
+  def matches?(subject); end
+
+  def missing_option(); end
+
+  def missing_option=(missing_option); end
+
+  def name(); end
+
+  def name=(name); end
+
+  def option_verifier(); end
+
+  def subject(); end
+
+  def subject=(subject); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::CounterCacheMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::DependentMatcher
+  def dependent(); end
+
+  def dependent=(dependent); end
+
+  def description(); end
+
+  def initialize(dependent, name); end
+
+  def matches?(subject); end
+
+  def missing_option(); end
+
+  def missing_option=(missing_option); end
+
+  def name(); end
+
+  def name=(name); end
+
+  def subject(); end
+
+  def subject=(subject); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::DependentMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::InverseOfMatcher
+  def description(); end
+
+  def initialize(inverse_of, name); end
+
+  def inverse_of(); end
+
+  def inverse_of=(inverse_of); end
+
+  def matches?(subject); end
+
+  def missing_option(); end
+
+  def missing_option=(missing_option); end
+
+  def name(); end
+
+  def name=(name); end
+
+  def option_verifier(); end
+
+  def subject(); end
+
+  def subject=(subject); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::InverseOfMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::JoinTableMatcher
+  def associated_class(*_, &_1); end
+
+  def association_foreign_key(*_, &_1); end
+
+  def association_matcher(); end
+
+  def connection(*_, &_1); end
+
+  def failure_message(); end
+
+  def foreign_key(*_, &_1); end
+
+  def initialize(association_matcher, reflector); end
+
+  def join_table_exists?(); end
+
+  def join_table_has_correct_columns?(); end
+
+  def join_table_name(*_, &_1); end
+
+  def join_table_option_correct?(); end
+
+  def matches?(_subject); end
+
+  def missing_option(); end
+
+  def model_class(*_, &_1); end
+
+  def name(*_, &_1); end
+
+  def option_verifier(*_, &_1); end
+
+  def options(*_, &_1); end
+
+  def reflector(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::JoinTableMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ModelReflection
+  def associated_class(); end
+
+  def association_foreign_key(); end
+
+  def association_relation(related_instance); end
+
+  def foreign_key(); end
+
+  def has_and_belongs_to_many_name(); end
+
+  def initialize(reflection); end
+
+  def join_table_name(); end
+
+  def polymorphic?(); end
+
+  def reflection(); end
+
+  def subject(); end
+
+  def through?(); end
+
+  def validate_inverse_of_through_association!(); end
+  RUBYGEMS_ACTIVATION_MONITOR = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ModelReflection
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ModelReflector
+  def associated_class(*_, &_1); end
+
+  def association_foreign_key(*_, &_1); end
+
+  def association_relation(); end
+
+  def build_relation_with_clause(name, value); end
+
+  def extract_relation_clause_from(relation, name); end
+
+  def foreign_key(*_, &_1); end
+
+  def has_and_belongs_to_many_name(*_, &_1); end
+
+  def initialize(subject, name); end
+
+  def join_table_name(*_, &_1); end
+
+  def model_class(); end
+
+  def name(); end
+
+  def polymorphic?(*_, &_1); end
+
+  def reflect_on_association(name); end
+
+  def reflection(); end
+
+  def subject(); end
+
+  def through?(*_, &_1); end
+
+  def validate_inverse_of_through_association!(*_, &_1); end
+
+  def value_as_sql(value); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ModelReflector
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::OptionVerifier
+  def actual_value_for(name); end
+
+  def actual_value_for_class_name(); end
+
+  def actual_value_for_option(name); end
+
+  def actual_value_for_relation_clause(name); end
+
+  def correct_for?(*args); end
+
+  def correct_for_boolean?(name, expected_value); end
+
+  def correct_for_constant?(name, expected_unresolved_value); end
+
+  def correct_for_hash?(name, expected_value); end
+
+  def correct_for_relation_clause?(name, expected_value); end
+
+  def correct_for_string?(name, expected_value); end
+
+  def expected_value_for(type, name, value); end
+
+  def expected_value_for_constant(name); end
+
+  def expected_value_for_relation_clause(name, value); end
+
+  def initialize(reflector); end
+
+  def reflection(*_, &_1); end
+
+  def reflector(); end
+
+  def type_cast(type, value); end
+  DEFAULT_VALUE_OF_OPTIONS = ::T.let(nil, ::T.untyped)
+  RELATION_OPTIONS = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::OptionVerifier
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::OptionalMatcher
+  def description(); end
+
+  def initialize(attribute_name, optional); end
+
+  def matches?(subject); end
+
+  def missing_option(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::OptionalMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::OrderMatcher
+  def description(); end
+
+  def initialize(order, name); end
+
+  def matches?(subject); end
+
+  def missing_option(); end
+
+  def missing_option=(missing_option); end
+
+  def name(); end
+
+  def name=(name); end
+
+  def option_verifier(); end
+
+  def order(); end
+
+  def order=(order); end
+
+  def subject(); end
+
+  def subject=(subject); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::OrderMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::RequiredMatcher
+  def description(); end
+
+  def initialize(attribute_name, required); end
+
+  def matches?(subject); end
+
+  def missing_option(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::RequiredMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::SourceMatcher
+  def description(); end
+
+  def initialize(source, name); end
+
+  def matches?(subject); end
+
+  def missing_option(); end
+
+  def missing_option=(missing_option); end
+
+  def name(); end
+
+  def name=(name); end
+
+  def option_verifier(); end
+
+  def source(); end
+
+  def source=(source); end
+
+  def subject(); end
+
+  def subject=(subject); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::SourceMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ThroughMatcher
+  def association_set_properly?(); end
+
+  def description(); end
+
+  def initialize(through, name); end
+
+  def matches?(subject); end
+
+  def missing_option(); end
+
+  def missing_option=(missing_option); end
+
+  def name(); end
+
+  def name=(name); end
+
+  def option_verifier(); end
+
+  def subject(); end
+
+  def subject=(subject); end
+
+  def through(); end
+
+  def through=(through); end
+
+  def through_association_correct?(); end
+
+  def through_association_exists?(); end
+
+  def through_reflection(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ThroughMatcher
+end
+
+module Shoulda::Matchers::ActiveRecord::AssociationMatchers
+end
+
+class Shoulda::Matchers::ActiveRecord::DefineEnumForMatcher
+  def backed_by_column_of_type(expected_column_type); end
+
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(attribute_name); end
+
+  def matches?(subject); end
+
+  def with(expected_enum_values); end
+
+  def with_prefix(expected_prefix=T.unsafe(nil)); end
+
+  def with_suffix(expected_suffix=T.unsafe(nil)); end
+
+  def with_values(expected_enum_values); end
+end
+
+class Shoulda::Matchers::ActiveRecord::DefineEnumForMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveAttachedMatcher
+  def description(); end
+
+  def expectation(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(macro, name); end
+
+  def matches?(subject); end
+
+  def name(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveAttachedMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveDbColumnMatcher
+  def actual_primary?(); end
+
+  def actual_scale(); end
+
+  def column_exists?(); end
+
+  def correct_column_type?(); end
+
+  def correct_default?(); end
+
+  def correct_limit?(); end
+
+  def correct_null?(); end
+
+  def correct_precision?(); end
+
+  def correct_primary?(); end
+
+  def correct_scale?(); end
+
+  def description(); end
+
+  def expectation(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(column); end
+
+  def matched_column(); end
+
+  def matches?(subject); end
+
+  def model_class(); end
+
+  def of_type(column_type); end
+
+  def validate_options(opts); end
+
+  def with_options(opts=T.unsafe(nil)); end
+  OPTIONS = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveDbColumnMatcher::DecoratedColumn
+  def initialize(model, column); end
+
+  def model(); end
+
+  def primary?(); end
+
+  def type_cast_default(); end
+  RUBYGEMS_ACTIVATION_MONITOR = ::T.let(nil, ::T.untyped)
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveDbColumnMatcher::DecoratedColumn
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveDbColumnMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveDbIndexMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(columns); end
+
+  def matches?(subject); end
+
+  def unique(unique=T.unsafe(nil)); end
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveDbIndexMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveImplicitOrderColumnMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(column_name); end
+
+  def matches?(subject); end
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveImplicitOrderColumnMatcher::PrimaryCheckFailedError
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveImplicitOrderColumnMatcher::PrimaryCheckFailedError
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveImplicitOrderColumnMatcher::SecondaryCheckFailedError
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveImplicitOrderColumnMatcher::SecondaryCheckFailedError
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveImplicitOrderColumnMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveReadonlyAttributeMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(attribute); end
+
+  def matches?(subject); end
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveReadonlyAttributeMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveRichTextMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(rich_text_attribute); end
+
+  def matches?(subject); end
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveRichTextMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveSecureTokenMatcher
+  def description(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def ignoring_check_for_db_index(); end
+
+  def initialize(token_attribute); end
+
+  def matches?(subject); end
+
+  def token_attribute(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::HaveSecureTokenMatcher
+end
+
+class Shoulda::Matchers::ActiveRecord::SerializeMatcher
+  def as(type); end
+
+  def as_instance_of(type); end
+
+  def attribute_is_serialized?(); end
+
+  def class_valid?(); end
+
+  def description(); end
+
+  def expectation(); end
+
+  def failure_message(); end
+
+  def failure_message_when_negated(); end
+
+  def initialize(name); end
+
+  def instance_class_valid?(); end
+
+  def matches?(subject); end
+
+  def model(); end
+
+  def model_class(); end
+
+  def serialization_coder(); end
+
+  def serialization_valid?(); end
+
+  def type_valid?(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::SerializeMatcher
+end
+
+module Shoulda::Matchers::ActiveRecord::Uniqueness
+end
+
+class Shoulda::Matchers::ActiveRecord::Uniqueness::Model
+  def already_exists?(); end
+
+  def initialize(name, namespace); end
+
+  def name(); end
+
+  def namespace(); end
+
+  def next(); end
+
+  def symlink_to(parent); end
+end
+
+class Shoulda::Matchers::ActiveRecord::Uniqueness::Model
+  def self.next_unique_copy_of(model_name, namespace); end
+end
+
+class Shoulda::Matchers::ActiveRecord::Uniqueness::Namespace
+  def clear(); end
+
+  def constant(); end
+
+  def has?(name); end
+
+  def initialize(constant); end
+
+  def set(name, value); end
+end
+
+class Shoulda::Matchers::ActiveRecord::Uniqueness::Namespace
+end
+
+class Shoulda::Matchers::ActiveRecord::Uniqueness::TestModelCreator
+  def create(); end
+
+  def initialize(model_name, namespace); end
+
+  def model_name(); end
+
+  def namespace(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::Uniqueness::TestModelCreator
+  def self.create(model_name, namespace); end
+end
+
+module Shoulda::Matchers::ActiveRecord::Uniqueness::TestModels
+end
+
+module Shoulda::Matchers::ActiveRecord::Uniqueness::TestModels
+  def self.create(model_name); end
+
+  def self.remove_all(); end
+
+  def self.root_namespace(); end
+end
+
+module Shoulda::Matchers::ActiveRecord::Uniqueness
+end
+
+class Shoulda::Matchers::ActiveRecord::ValidateUniquenessOfMatcher
+  include ::Shoulda::Matchers::ActiveModel::Helpers
+  def allow_nil(); end
+
+  def case_insensitive(); end
+
+  def does_not_match?(given_record); end
+
+  def expects_to_allow_nil?(); end
+
+  def ignoring_case_sensitivity(); end
+
+  def matches?(given_record); end
+
+  def scoped_to(*scopes); end
+
+  def simple_description(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::ValidateUniquenessOfMatcher::AttributeSetters
+  include ::Enumerable
+  def +(other_attribute_setters); end
+
+  def <<(given_attribute_setter); end
+
+  def each(&block); end
+
+  def last(); end
+end
+
+class Shoulda::Matchers::ActiveRecord::ValidateUniquenessOfMatcher::AttributeSetters
+end
+
+class Shoulda::Matchers::ActiveRecord::ValidateUniquenessOfMatcher::ExistingRecordInvalid
+  include ::Shoulda::Matchers::ActiveModel::Helpers
+  def underlying_exception(); end
+
+  def underlying_exception=(underlying_exception); end
+end
+
+class Shoulda::Matchers::ActiveRecord::ValidateUniquenessOfMatcher::ExistingRecordInvalid
+end
+
+class Shoulda::Matchers::ActiveRecord::ValidateUniquenessOfMatcher::NonCaseSwappableValueError
+  def attribute(); end
+
+  def attribute=(attribute); end
+
+  def model(); end
+
+  def model=(model); end
+
+  def value(); end
+
+  def value=(value); end
+end
+
+class Shoulda::Matchers::ActiveRecord::ValidateUniquenessOfMatcher::NonCaseSwappableValueError
+end
+
+class Shoulda::Matchers::ActiveRecord::ValidateUniquenessOfMatcher
 end
 
 module Shoulda::Matchers::ActiveRecord

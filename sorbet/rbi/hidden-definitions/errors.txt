@@ -480,26 +480,26 @@
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PROTO
 # uninitialized constant ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_HOST
-# Did you mean?  ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PROTO
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PORT
-# Did you mean?  ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PROTO
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PROTO
-# Did you mean?  ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SCHEME
-# Did you mean?  ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionCable::Connection::TestRequest::HTTP_X_FORWARDED_PROTO
@@ -1367,13 +1367,13 @@
 # wrong constant name <Class:NullSessionHash>
 # wrong constant name handle_unverified_request
 # wrong constant name initialize
-# uninitialized constant #<Class:0x000055dbb18e91e8>::DOMAIN_REGEXP
+# uninitialized constant #<Class:0x00007f443c022fd8>::DOMAIN_REGEXP
 # Did you mean?  ActionController::RequestForgeryProtection::ProtectionMethods::NullSession::NullCookieJar::DOMAIN_REGEXP
-# uninitialized constant #<Class:0x000055dbb18e91e8>::Elem
+# uninitialized constant #<Class:0x00007f443c022fd8>::Elem
 # wrong constant name write
 # wrong constant name <static-init>
-# uninitialized constant #<Class:0x000055dbb18e9b48>::Elem
-# uninitialized constant #<Class:0x000055dbb18e9b48>::Unspecified
+# uninitialized constant #<Class:0x00007f443c023d20>::Elem
+# uninitialized constant #<Class:0x00007f443c023d20>::Unspecified
 # Did you mean?  ActionController::RequestForgeryProtection::ProtectionMethods::NullSession::NullSessionHash::Unspecified
 # wrong constant name initialize
 # wrong constant name <static-init>
@@ -1454,26 +1454,26 @@
 #                ActionController::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionController::TestRequest::HTTP_X_FORWARDED_PROTO
 # uninitialized constant ActionController::TestRequest::HTTP_X_FORWARDED_HOST
-# Did you mean?  ActionController::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionController::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionController::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionController::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionController::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionController::TestRequest::HTTP_X_FORWARDED_PROTO
 #                ActionController::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionController::TestRequest::HTTP_X_FORWARDED_PORT
-# Did you mean?  ActionController::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionController::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionController::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionController::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionController::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionController::TestRequest::HTTP_X_FORWARDED_PROTO
 #                ActionController::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionController::TestRequest::HTTP_X_FORWARDED_PROTO
-# Did you mean?  ActionController::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionController::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionController::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionController::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionController::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionController::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionController::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionController::TestRequest::HTTP_X_FORWARDED_SCHEME
-# Did you mean?  ActionController::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionController::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionController::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionController::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionController::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionController::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionController::TestRequest::HTTP_X_FORWARDED_PROTO
@@ -2251,8 +2251,8 @@
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Id_C
 # Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version
-# Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_R
-#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
+# Did you mean?  ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
+#                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_R
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Version
 #                ActionDispatch::Journey::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant ActionDispatch::Journey::Parser::Racc_Runtime_Core_Version_C
@@ -2574,26 +2574,26 @@
 #                ActionDispatch::Request::HTTP_X_FORWARDED_HOST
 #                ActionDispatch::Request::HTTP_X_FORWARDED_PROTO
 # uninitialized constant ActionDispatch::Request::HTTP_X_FORWARDED_HOST
-# Did you mean?  ActionDispatch::Request::HTTP_X_FORWARDED_FOR
-#                ActionDispatch::Request::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionDispatch::Request::HTTP_X_FORWARDED_SSL
+#                ActionDispatch::Request::HTTP_X_FORWARDED_FOR
 #                ActionDispatch::Request::HTTP_X_FORWARDED_PORT
 #                ActionDispatch::Request::HTTP_X_FORWARDED_PROTO
 #                ActionDispatch::Request::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionDispatch::Request::HTTP_X_FORWARDED_PORT
-# Did you mean?  ActionDispatch::Request::HTTP_X_FORWARDED_FOR
-#                ActionDispatch::Request::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionDispatch::Request::HTTP_X_FORWARDED_SSL
+#                ActionDispatch::Request::HTTP_X_FORWARDED_FOR
 #                ActionDispatch::Request::HTTP_X_FORWARDED_HOST
 #                ActionDispatch::Request::HTTP_X_FORWARDED_PROTO
 #                ActionDispatch::Request::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionDispatch::Request::HTTP_X_FORWARDED_PROTO
-# Did you mean?  ActionDispatch::Request::HTTP_X_FORWARDED_FOR
-#                ActionDispatch::Request::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionDispatch::Request::HTTP_X_FORWARDED_SSL
+#                ActionDispatch::Request::HTTP_X_FORWARDED_FOR
 #                ActionDispatch::Request::HTTP_X_FORWARDED_PORT
 #                ActionDispatch::Request::HTTP_X_FORWARDED_HOST
 #                ActionDispatch::Request::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionDispatch::Request::HTTP_X_FORWARDED_SCHEME
-# Did you mean?  ActionDispatch::Request::HTTP_X_FORWARDED_FOR
-#                ActionDispatch::Request::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionDispatch::Request::HTTP_X_FORWARDED_SSL
+#                ActionDispatch::Request::HTTP_X_FORWARDED_FOR
 #                ActionDispatch::Request::HTTP_X_FORWARDED_PORT
 #                ActionDispatch::Request::HTTP_X_FORWARDED_HOST
 #                ActionDispatch::Request::HTTP_X_FORWARDED_PROTO
@@ -3236,26 +3236,26 @@
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_PROTO
 # uninitialized constant ActionDispatch::TestRequest::HTTP_X_FORWARDED_HOST
-# Did you mean?  ActionDispatch::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionDispatch::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionDispatch::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionDispatch::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_PROTO
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionDispatch::TestRequest::HTTP_X_FORWARDED_PORT
-# Did you mean?  ActionDispatch::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionDispatch::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionDispatch::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionDispatch::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_PROTO
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionDispatch::TestRequest::HTTP_X_FORWARDED_PROTO
-# Did you mean?  ActionDispatch::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionDispatch::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionDispatch::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionDispatch::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant ActionDispatch::TestRequest::HTTP_X_FORWARDED_SCHEME
-# Did you mean?  ActionDispatch::TestRequest::HTTP_X_FORWARDED_FOR
-#                ActionDispatch::TestRequest::HTTP_X_FORWARDED_SSL
+# Did you mean?  ActionDispatch::TestRequest::HTTP_X_FORWARDED_SSL
+#                ActionDispatch::TestRequest::HTTP_X_FORWARDED_FOR
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_PORT
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_HOST
 #                ActionDispatch::TestRequest::HTTP_X_FORWARDED_PROTO
@@ -4774,14 +4774,14 @@
 # wrong constant name time_tag
 # uninitialized constant ActionView::Helpers::DebugHelper::ARIA_PREFIXES
 # Did you mean?  ActionView::Helpers::DebugHelper::DATA_PREFIXES
-#                ActionView::Helpers::ARIA_PREFIXES
 #                ActionView::Helpers::DATA_PREFIXES
+#                ActionView::Helpers::ARIA_PREFIXES
 # uninitialized constant ActionView::Helpers::DebugHelper::BOOLEAN_ATTRIBUTES
 # Did you mean?  ActionView::Helpers::BOOLEAN_ATTRIBUTES
 # uninitialized constant ActionView::Helpers::DebugHelper::DATA_PREFIXES
 # Did you mean?  ActionView::Helpers::DebugHelper::ARIA_PREFIXES
-#                ActionView::Helpers::ARIA_PREFIXES
 #                ActionView::Helpers::DATA_PREFIXES
+#                ActionView::Helpers::ARIA_PREFIXES
 # uninitialized constant ActionView::Helpers::DebugHelper::PRE_CONTENT_STRINGS
 # Did you mean?  ActionView::Helpers::PRE_CONTENT_STRINGS
 # uninitialized constant ActionView::Helpers::DebugHelper::TAG_TYPES
@@ -4831,14 +4831,14 @@
 # wrong constant name form_with_generates_remote_forms=
 # uninitialized constant ActionView::Helpers::FormOptionsHelper::ARIA_PREFIXES
 # Did you mean?  ActionView::Helpers::FormOptionsHelper::DATA_PREFIXES
-#                ActionView::Helpers::ARIA_PREFIXES
 #                ActionView::Helpers::DATA_PREFIXES
+#                ActionView::Helpers::ARIA_PREFIXES
 # uninitialized constant ActionView::Helpers::FormOptionsHelper::BOOLEAN_ATTRIBUTES
 # Did you mean?  ActionView::Helpers::BOOLEAN_ATTRIBUTES
 # uninitialized constant ActionView::Helpers::FormOptionsHelper::DATA_PREFIXES
 # Did you mean?  ActionView::Helpers::FormOptionsHelper::ARIA_PREFIXES
-#                ActionView::Helpers::ARIA_PREFIXES
 #                ActionView::Helpers::DATA_PREFIXES
+#                ActionView::Helpers::ARIA_PREFIXES
 # uninitialized constant ActionView::Helpers::FormOptionsHelper::PRE_CONTENT_STRINGS
 # Did you mean?  ActionView::Helpers::PRE_CONTENT_STRINGS
 # uninitialized constant ActionView::Helpers::FormOptionsHelper::TAG_TYPES
@@ -7679,28 +7679,28 @@
 # wrong constant name cache_key_with_version
 # wrong constant name cache_version
 # wrong constant name to_param
-# uninitialized constant #<Class:0x000055dbb544a520>::ACTIONS
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::ACTIONS
 # Did you mean?  ActiveRecord::InternalMetadata::ACTIONS
-# uninitialized constant #<Class:0x000055dbb544a520>::CALLBACKS
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::CALLBACKS
 # Did you mean?  ActiveRecord::InternalMetadata::Callbacks
 #                ActiveRecord::Callbacks
 #                ActiveRecord::InternalMetadata::Callback
 #                ActiveRecord::InternalMetadata::CALLBACKS
-# uninitialized constant #<Class:0x000055dbb544a520>::CALLBACK_FILTER_TYPES
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::CALLBACK_FILTER_TYPES
 # Did you mean?  ActiveRecord::InternalMetadata::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055dbb544a520>::CALL_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::CALL_COMPILABLE_REGEXP
 # Did you mean?  ActiveRecord::InternalMetadata::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedAssociationMethods>
 # wrong constant name <Class:GeneratedAttributeMethods>
-# uninitialized constant #<Class:0x000055dbb544a520>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  ActiveRecord::InternalMetadata::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055dbb544a520>::MINIMUM_TOKEN_LENGTH
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::MINIMUM_TOKEN_LENGTH
 # Did you mean?  ActiveRecord::InternalMetadata::MINIMUM_TOKEN_LENGTH
-# uninitialized constant #<Class:0x000055dbb544a520>::NAME_COMPILABLE_REGEXP
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::NAME_COMPILABLE_REGEXP
 # Did you mean?  ActiveRecord::InternalMetadata::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055dbb544a520>::RESTRICTED_CLASS_METHODS
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::RESTRICTED_CLASS_METHODS
 # Did you mean?  ActiveRecord::InternalMetadata::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055dbb544a520>::UNASSIGNABLE_KEYS
+# uninitialized constant #<Class:0x000055cbcd30d4e8>::UNASSIGNABLE_KEYS
 # Did you mean?  ActiveRecord::InternalMetadata::UNASSIGNABLE_KEYS
 # wrong constant name <static-init>
 # wrong constant name <static-init>
@@ -11896,12 +11896,16 @@
 # uninitialized constant Bundler::Definition::GENERICS
 # uninitialized constant Bundler::Definition::GENERIC_CACHE
 # wrong constant name dependencies_for
+# wrong constant name disable_multisource?
 # wrong constant name most_specific_locked_platform
 # wrong constant name requested_dependencies
+# wrong constant name clone
+# wrong constant name get_proxy
 # uninitialized constant Bundler::Dependency::TYPES
 # wrong constant name branch
 # wrong constant name expanded_platforms
 # wrong constant name git
+# wrong constant name check_primary_source_safety
 # wrong constant name <static-init>
 # wrong constant name environment
 # wrong constant name report
@@ -11983,10 +11987,12 @@
 # wrong constant name allowed_push_host
 # wrong constant name already_tagged?
 # wrong constant name base
+# wrong constant name build_checksum
 # wrong constant name build_gem
 # wrong constant name built_gem_path
 # wrong constant name clean?
 # wrong constant name committed?
+# wrong constant name current_branch
 # wrong constant name default_remote
 # wrong constant name gem_command
 # wrong constant name gem_key
@@ -12064,12 +12070,14 @@
 # uninitialized constant Bundler::LazySpecification::GENERICS
 # uninitialized constant Bundler::LazySpecification::GENERIC_CACHE
 # wrong constant name eql?
+# wrong constant name platform_string
+# uninitialized constant Bundler::LazySpecification::Identifier
+# uninitialized constant Bundler::LazySpecification::Identifier
 # uninitialized constant Bundler::Molinillo::Compatibility
 # Did you mean?  Comparable
 # uninitialized constant Bundler::Molinillo::Compatibility
 # Did you mean?  Comparable
-# wrong constant name _recursive_predecessors
-# wrong constant name _recursive_successors
+# wrong constant name dependencies_equal?
 # wrong constant name ==
 # wrong constant name app_cache_dirname
 # wrong constant name app_cache_path
@@ -12089,6 +12097,7 @@
 # wrong constant name install
 # wrong constant name install_path
 # wrong constant name installed?
+# wrong constant name local!
 # wrong constant name name
 # wrong constant name options
 # wrong constant name options_to_lock
@@ -12130,12 +12139,15 @@
 # wrong constant name uninstall
 # wrong constant name <static-init>
 # wrong constant name lock
-# uninitialized constant Bundler::Resolver::SpecGroup::GENERICS
-# uninitialized constant Bundler::Resolver::SpecGroup::GENERIC_CACHE
+# uninitialized constant Bundler::Resolver::GENERICS
+# uninitialized constant Bundler::Resolver::GENERIC_CACHE
+# wrong constant name results_for
+# wrong constant name activate_all_platforms!
 # wrong constant name activated_platforms
 # wrong constant name activated_platforms=
-# wrong constant name copy_for
+# wrong constant name partitioned_dependency_names_for_activated_platforms
 # wrong constant name sorted_activated_platforms
+# wrong constant name create_for
 # wrong constant name attempt
 # wrong constant name attempts
 # wrong constant name current_run
@@ -12204,14 +12216,22 @@
 # wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name validate!
+# wrong constant name cached!
+# wrong constant name local!
+# wrong constant name remote!
 # uninitialized constant Bundler::Source::Git::DEFAULT_GLOB
 # wrong constant name glob
 # wrong constant name local?
+# wrong constant name disable_multisource?
+# wrong constant name disable_multisource?
+# wrong constant name global_path_source
+# wrong constant name merged_gem_lockfile_sections!
 # uninitialized constant Bundler::StubSpecification::GENERICS
 # uninitialized constant Bundler::StubSpecification::GENERIC_CACHE
 # wrong constant name default_gem?
 # wrong constant name extensions
 # wrong constant name gem_build_complete_path
+# wrong constant name manually_installed?
 # wrong constant name <Class:Actions>
 # wrong constant name <Class:AmbiguousCommandError>
 # wrong constant name <Class:Argument>
@@ -12637,6 +12657,7 @@
 # wrong constant name <static-init>
 # uninitialized constant Bundler::Thor::Shell::Color::DEFAULT_TERMINAL_WIDTH
 # wrong constant name are_colors_disabled?
+# wrong constant name are_colors_supported?
 # wrong constant name diff_lcs_loaded?
 # wrong constant name output_diff_line
 # wrong constant name set_color
@@ -13446,8 +13467,6 @@
 # wrong constant name empty?
 # wrong constant name for
 # wrong constant name for_many
-# uninitialized constant Bundler::YAMLSerializer
-# uninitialized constant Bundler::YAMLSerializer
 # wrong constant name most_specific_locked_platform?
 # wrong constant name original_exec
 # wrong constant name original_system
@@ -15441,27 +15460,27 @@
 # uninitialized constant GDBMError
 # uninitialized constant GDBMFatalError
 # uninitialized constant GDBMFatalError
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::ACTIONS
+# uninitialized constant Game(Table doesn't exist)::ACTIONS
 # Did you mean?  Game::ACTIONS
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::CALLBACKS
+# uninitialized constant Game(Table doesn't exist)::CALLBACKS
 # Did you mean?  Game::Callbacks
 #                Game::Callback
 #                Game::CALLBACKS
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::CALLBACK_FILTER_TYPES
+# uninitialized constant Game(Table doesn't exist)::CALLBACK_FILTER_TYPES
 # Did you mean?  Game::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::CALL_COMPILABLE_REGEXP
+# uninitialized constant Game(Table doesn't exist)::CALL_COMPILABLE_REGEXP
 # Did you mean?  Game::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedAssociationMethods>
 # wrong constant name <Class:GeneratedAttributeMethods>
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Game(Table doesn't exist)::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  Game::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::MINIMUM_TOKEN_LENGTH
+# uninitialized constant Game(Table doesn't exist)::MINIMUM_TOKEN_LENGTH
 # Did you mean?  Game::MINIMUM_TOKEN_LENGTH
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::NAME_COMPILABLE_REGEXP
+# uninitialized constant Game(Table doesn't exist)::NAME_COMPILABLE_REGEXP
 # Did you mean?  Game::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::RESTRICTED_CLASS_METHODS
+# uninitialized constant Game(Table doesn't exist)::RESTRICTED_CLASS_METHODS
 # Did you mean?  Game::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055dbb1eb6cb0>::UNASSIGNABLE_KEYS
+# uninitialized constant Game(Table doesn't exist)::UNASSIGNABLE_KEYS
 # Did you mean?  Game::UNASSIGNABLE_KEYS
 # wrong constant name autosave_associated_records_for_first_team
 # wrong constant name autosave_associated_records_for_second_team
@@ -15589,7 +15608,10 @@
 # wrong constant name uri=
 # wrong constant name <static-init>
 # wrong constant name <static-init>
+# wrong constant name <Class:CorrectHashForLambdaOperator>
 # wrong constant name <Class:OrderIndependentComparison>
+# wrong constant name hash
+# wrong constant name <static-init>
 # wrong constant name ==
 # wrong constant name _requirements_sorted?
 # wrong constant name _with_sorted_requirements
@@ -18247,11 +18269,11 @@
 # uninitialized constant Net::FTPConnectionError
 # uninitialized constant Net::FTPConnectionError
 # uninitialized constant Net::FTPError
-# Did you mean?  Net::HTTPError
-#                Net::SMTPError
+# Did you mean?  Net::SMTPError
+#                Net::HTTPError
 # uninitialized constant Net::FTPError
-# Did you mean?  Net::HTTPError
-#                Net::SMTPError
+# Did you mean?  Net::SMTPError
+#                Net::HTTPError
 # uninitialized constant Net::FTPPermError
 # Did you mean?  FiberError
 # uninitialized constant Net::FTPPermError
@@ -18340,14 +18362,14 @@
 # uninitialized constant Net::IMAP::OP_NO_TICKET
 # uninitialized constant Net::IMAP::OP_NO_TLSv1
 # Did you mean?  Net::IMAP::OP_NO_TLSv1_2
-#                Net::IMAP::OP_NO_TLSv1_3
 #                Net::IMAP::OP_NO_TLSv1_1
+#                Net::IMAP::OP_NO_TLSv1_3
 # uninitialized constant Net::IMAP::OP_NO_TLSv1_1
 # Did you mean?  Net::IMAP::OP_NO_TLSv1_2
 #                Net::IMAP::OP_NO_TLSv1_3
 # uninitialized constant Net::IMAP::OP_NO_TLSv1_2
-# Did you mean?  Net::IMAP::OP_NO_TLSv1_3
-#                Net::IMAP::OP_NO_TLSv1_1
+# Did you mean?  Net::IMAP::OP_NO_TLSv1_1
+#                Net::IMAP::OP_NO_TLSv1_3
 # uninitialized constant Net::IMAP::OP_NO_TLSv1_3
 # Did you mean?  Net::IMAP::OP_NO_TLSv1_2
 #                Net::IMAP::OP_NO_TLSv1_1
@@ -18486,8 +18508,8 @@
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Id_C
 # Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Version
-# Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_R
-#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
+# Did you mean?  Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
+#                Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_R
 #                Nokogiri::CSS::Parser::Racc_Runtime_Version
 #                Nokogiri::CSS::Parser::Racc_Runtime_Core_Id_C
 # uninitialized constant Nokogiri::CSS::Parser::Racc_Runtime_Core_Version_C
@@ -18968,8 +18990,8 @@
 # uninitialized constant Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Id_C
 # Did you mean?  Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Version_C
 # uninitialized constant Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Version
-# Did you mean?  Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Version_R
-#                Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Version_C
+# Did you mean?  Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Version_C
+#                Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Version_R
 #                Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Version
 #                Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Id_C
 # uninitialized constant Packwerk::Parsers::Ruby::RaiseExceptionsParser::Racc_Runtime_Core_Version_C
@@ -19034,8 +19056,8 @@
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Id_C
 # Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Version_C
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Version
-# Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Version_R
-#                Parser::Ruby24::Racc_Runtime_Core_Version_C
+# Did you mean?  Parser::Ruby24::Racc_Runtime_Core_Version_C
+#                Parser::Ruby24::Racc_Runtime_Core_Version_R
 #                Parser::Ruby24::Racc_Runtime_Version
 #                Parser::Ruby24::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby24::Racc_Runtime_Core_Version_C
@@ -19054,8 +19076,8 @@
 # uninitialized constant Parser::Ruby27::Racc_Runtime_Core_Id_C
 # Did you mean?  Parser::Ruby27::Racc_Runtime_Core_Version_C
 # uninitialized constant Parser::Ruby27::Racc_Runtime_Core_Version
-# Did you mean?  Parser::Ruby27::Racc_Runtime_Core_Version_R
-#                Parser::Ruby27::Racc_Runtime_Core_Version_C
+# Did you mean?  Parser::Ruby27::Racc_Runtime_Core_Version_C
+#                Parser::Ruby27::Racc_Runtime_Core_Version_R
 #                Parser::Ruby27::Racc_Runtime_Version
 #                Parser::Ruby27::Racc_Runtime_Core_Id_C
 # uninitialized constant Parser::Ruby27::Racc_Runtime_Core_Version_C
@@ -20270,8 +20292,8 @@
 # uninitialized constant RDoc::RD::BlockParser::Racc_Runtime_Core_Id_C
 # Did you mean?  RDoc::RD::BlockParser::Racc_Runtime_Core_Version_C
 # uninitialized constant RDoc::RD::BlockParser::Racc_Runtime_Core_Version
-# Did you mean?  RDoc::RD::BlockParser::Racc_Runtime_Core_Version_R
-#                RDoc::RD::BlockParser::Racc_Runtime_Core_Version_C
+# Did you mean?  RDoc::RD::BlockParser::Racc_Runtime_Core_Version_C
+#                RDoc::RD::BlockParser::Racc_Runtime_Core_Version_R
 #                RDoc::RD::BlockParser::Racc_Runtime_Version
 #                RDoc::RD::BlockParser::Racc_Runtime_Core_Id_C
 # uninitialized constant RDoc::RD::BlockParser::Racc_Runtime_Core_Version_C
@@ -20291,8 +20313,8 @@
 # uninitialized constant RDoc::RD::InlineParser::Racc_Runtime_Core_Id_C
 # Did you mean?  RDoc::RD::InlineParser::Racc_Runtime_Core_Version_C
 # uninitialized constant RDoc::RD::InlineParser::Racc_Runtime_Core_Version
-# Did you mean?  RDoc::RD::InlineParser::Racc_Runtime_Core_Version_R
-#                RDoc::RD::InlineParser::Racc_Runtime_Core_Version_C
+# Did you mean?  RDoc::RD::InlineParser::Racc_Runtime_Core_Version_C
+#                RDoc::RD::InlineParser::Racc_Runtime_Core_Version_R
 #                RDoc::RD::InlineParser::Racc_Runtime_Version
 #                RDoc::RD::InlineParser::Racc_Runtime_Core_Id_C
 # uninitialized constant RDoc::RD::InlineParser::Racc_Runtime_Core_Version_C
@@ -20840,9 +20862,9 @@
 # wrong constant name call
 # wrong constant name <Class:FileSystemResolver>
 # wrong constant name <Class:ResolverDecorator>
-# uninitialized constant #<Class:0x000055dbb3aada40>::DEFAULT_PATTERN
+# uninitialized constant #<Class:0x000055cbcb346f10>::DEFAULT_PATTERN
 # Did you mean?  RSpec::Rails::ViewRendering::EmptyTemplateResolver::FileSystemResolver::DEFAULT_PATTERN
-# uninitialized constant #<Class:0x000055dbb3aada40>::EXTENSIONS
+# uninitialized constant #<Class:0x000055cbcb346f10>::EXTENSIONS
 # Did you mean?  RSpec::Rails::ViewRendering::EmptyTemplateResolver::FileSystemResolver::EXTENSIONS
 # wrong constant name <static-init>
 # wrong constant name initialize
@@ -20903,26 +20925,26 @@
 #                Rack::Request::HTTP_X_FORWARDED_HOST
 #                Rack::Request::HTTP_X_FORWARDED_PROTO
 # uninitialized constant Rack::Request::HTTP_X_FORWARDED_HOST
-# Did you mean?  Rack::Request::HTTP_X_FORWARDED_FOR
-#                Rack::Request::HTTP_X_FORWARDED_SSL
+# Did you mean?  Rack::Request::HTTP_X_FORWARDED_SSL
+#                Rack::Request::HTTP_X_FORWARDED_FOR
 #                Rack::Request::HTTP_X_FORWARDED_PORT
 #                Rack::Request::HTTP_X_FORWARDED_PROTO
 #                Rack::Request::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant Rack::Request::HTTP_X_FORWARDED_PORT
-# Did you mean?  Rack::Request::HTTP_X_FORWARDED_FOR
-#                Rack::Request::HTTP_X_FORWARDED_SSL
+# Did you mean?  Rack::Request::HTTP_X_FORWARDED_SSL
+#                Rack::Request::HTTP_X_FORWARDED_FOR
 #                Rack::Request::HTTP_X_FORWARDED_HOST
 #                Rack::Request::HTTP_X_FORWARDED_PROTO
 #                Rack::Request::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant Rack::Request::HTTP_X_FORWARDED_PROTO
-# Did you mean?  Rack::Request::HTTP_X_FORWARDED_FOR
-#                Rack::Request::HTTP_X_FORWARDED_SSL
+# Did you mean?  Rack::Request::HTTP_X_FORWARDED_SSL
+#                Rack::Request::HTTP_X_FORWARDED_FOR
 #                Rack::Request::HTTP_X_FORWARDED_PORT
 #                Rack::Request::HTTP_X_FORWARDED_HOST
 #                Rack::Request::HTTP_X_FORWARDED_SCHEME
 # uninitialized constant Rack::Request::HTTP_X_FORWARDED_SCHEME
-# Did you mean?  Rack::Request::HTTP_X_FORWARDED_FOR
-#                Rack::Request::HTTP_X_FORWARDED_SSL
+# Did you mean?  Rack::Request::HTTP_X_FORWARDED_SSL
+#                Rack::Request::HTTP_X_FORWARDED_FOR
 #                Rack::Request::HTTP_X_FORWARDED_PORT
 #                Rack::Request::HTTP_X_FORWARDED_HOST
 #                Rack::Request::HTTP_X_FORWARDED_PROTO
@@ -21957,8 +21979,8 @@
 # Did you mean?  Ripper::EVENTS
 # uninitialized constant Ripper::Lexer::EXPR_ARG
 # Did you mean?  Ripper::Lexer::EXPR_BEG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_BEG
+#                Ripper::EXPR_ARG
 # uninitialized constant Ripper::Lexer::EXPR_ARG_ANY
 # Did you mean?  Ripper::Lexer::EXPR_END_ANY
 #                Ripper::Lexer::EXPR_BEG_ANY
@@ -21967,8 +21989,8 @@
 #                Ripper::EXPR_BEG_ANY
 # uninitialized constant Ripper::Lexer::EXPR_BEG
 # Did you mean?  Ripper::Lexer::EXPR_ARG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_BEG
+#                Ripper::EXPR_ARG
 # uninitialized constant Ripper::Lexer::EXPR_BEG_ANY
 # Did you mean?  Ripper::Lexer::EXPR_END_ANY
 #                Ripper::Lexer::EXPR_ARG_ANY
@@ -21981,25 +22003,25 @@
 # Did you mean?  Ripper::Lexer::EXPR_ARG
 #                Ripper::EXPR_ARG
 #                Ripper::Lexer::EXPR_ENDARG
-#                Ripper::EXPR_CMDARG
 #                Ripper::EXPR_ENDARG
+#                Ripper::EXPR_CMDARG
 # uninitialized constant Ripper::Lexer::EXPR_DOT
 # Did you mean?  Ripper::EXPR_DOT
 # uninitialized constant Ripper::Lexer::EXPR_END
 # Did you mean?  Ripper::Lexer::EXPR_MID
-#                Ripper::EXPR_MID
 #                Ripper::EXPR_END
+#                Ripper::EXPR_MID
 #                Ripper::Lexer::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 # uninitialized constant Ripper::Lexer::EXPR_ENDARG
 # Did you mean?  Ripper::Lexer::EXPR_ARG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_END
+#                Ripper::EXPR_ARG
 #                Ripper::Lexer::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 #                Ripper::Lexer::EXPR_CMDARG
-#                Ripper::EXPR_CMDARG
 #                Ripper::EXPR_ENDARG
+#                Ripper::EXPR_CMDARG
 #                Ripper::Lexer::EXPR_END_ANY
 #                Ripper::EXPR_END_ANY
 # uninitialized constant Ripper::Lexer::EXPR_ENDFN
@@ -22036,13 +22058,13 @@
 #                Ripper::EXPR_LABELED
 # uninitialized constant Ripper::Lexer::EXPR_MID
 # Did you mean?  Ripper::Lexer::EXPR_END
+#                Ripper::EXPR_END
 #                Ripper::EXPR_MID
-#                Ripper::EXPR_END
 # uninitialized constant Ripper::Lexer::EXPR_NONE
-# Did you mean?  Ripper::Lexer::EXPR_DOT
-#                Ripper::Lexer::EXPR_END
-#                Ripper::EXPR_DOT
+# Did you mean?  Ripper::Lexer::EXPR_END
+#                Ripper::Lexer::EXPR_DOT
 #                Ripper::EXPR_END
+#                Ripper::EXPR_DOT
 #                Ripper::EXPR_NONE
 #                Ripper::Lexer::EXPR_FNAME
 #                Ripper::EXPR_FNAME
@@ -22100,8 +22122,8 @@
 # Did you mean?  Ripper::EVENTS
 # uninitialized constant Ripper::SexpBuilder::EXPR_ARG
 # Did you mean?  Ripper::SexpBuilder::EXPR_BEG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_BEG
+#                Ripper::EXPR_ARG
 # uninitialized constant Ripper::SexpBuilder::EXPR_ARG_ANY
 # Did you mean?  Ripper::SexpBuilder::EXPR_END_ANY
 #                Ripper::SexpBuilder::EXPR_BEG_ANY
@@ -22110,8 +22132,8 @@
 #                Ripper::EXPR_BEG_ANY
 # uninitialized constant Ripper::SexpBuilder::EXPR_BEG
 # Did you mean?  Ripper::SexpBuilder::EXPR_ARG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_BEG
+#                Ripper::EXPR_ARG
 # uninitialized constant Ripper::SexpBuilder::EXPR_BEG_ANY
 # Did you mean?  Ripper::SexpBuilder::EXPR_END_ANY
 #                Ripper::SexpBuilder::EXPR_ARG_ANY
@@ -22124,25 +22146,25 @@
 # Did you mean?  Ripper::SexpBuilder::EXPR_ARG
 #                Ripper::EXPR_ARG
 #                Ripper::SexpBuilder::EXPR_ENDARG
-#                Ripper::EXPR_CMDARG
 #                Ripper::EXPR_ENDARG
+#                Ripper::EXPR_CMDARG
 # uninitialized constant Ripper::SexpBuilder::EXPR_DOT
 # Did you mean?  Ripper::EXPR_DOT
 # uninitialized constant Ripper::SexpBuilder::EXPR_END
 # Did you mean?  Ripper::SexpBuilder::EXPR_MID
-#                Ripper::EXPR_MID
 #                Ripper::EXPR_END
+#                Ripper::EXPR_MID
 #                Ripper::SexpBuilder::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 # uninitialized constant Ripper::SexpBuilder::EXPR_ENDARG
 # Did you mean?  Ripper::SexpBuilder::EXPR_ARG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_END
+#                Ripper::EXPR_ARG
 #                Ripper::SexpBuilder::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 #                Ripper::SexpBuilder::EXPR_CMDARG
-#                Ripper::EXPR_CMDARG
 #                Ripper::EXPR_ENDARG
+#                Ripper::EXPR_CMDARG
 #                Ripper::SexpBuilder::EXPR_END_ANY
 #                Ripper::EXPR_END_ANY
 # uninitialized constant Ripper::SexpBuilder::EXPR_ENDFN
@@ -22179,13 +22201,13 @@
 #                Ripper::EXPR_LABELED
 # uninitialized constant Ripper::SexpBuilder::EXPR_MID
 # Did you mean?  Ripper::SexpBuilder::EXPR_END
+#                Ripper::EXPR_END
 #                Ripper::EXPR_MID
-#                Ripper::EXPR_END
 # uninitialized constant Ripper::SexpBuilder::EXPR_NONE
-# Did you mean?  Ripper::SexpBuilder::EXPR_DOT
-#                Ripper::SexpBuilder::EXPR_END
-#                Ripper::EXPR_DOT
+# Did you mean?  Ripper::SexpBuilder::EXPR_END
+#                Ripper::SexpBuilder::EXPR_DOT
 #                Ripper::EXPR_END
+#                Ripper::EXPR_DOT
 #                Ripper::EXPR_NONE
 #                Ripper::SexpBuilder::EXPR_FNAME
 #                Ripper::EXPR_FNAME
@@ -22394,8 +22416,8 @@
 # Did you mean?  Ripper::EVENTS
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_ARG
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_BEG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_BEG
+#                Ripper::EXPR_ARG
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_ARG_ANY
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_END_ANY
 #                Ripper::SexpBuilderPP::EXPR_BEG_ANY
@@ -22404,8 +22426,8 @@
 #                Ripper::EXPR_BEG_ANY
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_BEG
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_ARG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_BEG
+#                Ripper::EXPR_ARG
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_BEG_ANY
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_END_ANY
 #                Ripper::SexpBuilderPP::EXPR_ARG_ANY
@@ -22418,25 +22440,25 @@
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_ARG
 #                Ripper::EXPR_ARG
 #                Ripper::SexpBuilderPP::EXPR_ENDARG
-#                Ripper::EXPR_CMDARG
 #                Ripper::EXPR_ENDARG
+#                Ripper::EXPR_CMDARG
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_DOT
 # Did you mean?  Ripper::EXPR_DOT
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_END
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_MID
-#                Ripper::EXPR_MID
 #                Ripper::EXPR_END
+#                Ripper::EXPR_MID
 #                Ripper::SexpBuilderPP::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_ENDARG
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_ARG
-#                Ripper::EXPR_ARG
 #                Ripper::EXPR_END
+#                Ripper::EXPR_ARG
 #                Ripper::SexpBuilderPP::EXPR_ENDFN
 #                Ripper::EXPR_ENDFN
 #                Ripper::SexpBuilderPP::EXPR_CMDARG
-#                Ripper::EXPR_CMDARG
 #                Ripper::EXPR_ENDARG
+#                Ripper::EXPR_CMDARG
 #                Ripper::SexpBuilderPP::EXPR_END_ANY
 #                Ripper::EXPR_END_ANY
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_ENDFN
@@ -22473,13 +22495,13 @@
 #                Ripper::EXPR_LABELED
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_MID
 # Did you mean?  Ripper::SexpBuilderPP::EXPR_END
+#                Ripper::EXPR_END
 #                Ripper::EXPR_MID
-#                Ripper::EXPR_END
 # uninitialized constant Ripper::SexpBuilderPP::EXPR_NONE
-# Did you mean?  Ripper::SexpBuilderPP::EXPR_DOT
-#                Ripper::SexpBuilderPP::EXPR_END
-#                Ripper::EXPR_DOT
+# Did you mean?  Ripper::SexpBuilderPP::EXPR_END
+#                Ripper::SexpBuilderPP::EXPR_DOT
 #                Ripper::EXPR_END
+#                Ripper::EXPR_DOT
 #                Ripper::EXPR_NONE
 #                Ripper::SexpBuilderPP::EXPR_FNAME
 #                Ripper::EXPR_FNAME
@@ -22602,6 +22624,21 @@
 # wrong constant name <Class:Text>
 # wrong constant name <Class:Util>
 # wrong constant name <Class:WordWrap>
+# wrong constant name <Class:CallbackMatcher>
+# wrong constant name <Class:FilterParamMatcher>
+# wrong constant name <Class:FlashStore>
+# wrong constant name <Class:PermitMatcher>
+# wrong constant name <Class:RedirectToMatcher>
+# wrong constant name <Class:RenderTemplateMatcher>
+# wrong constant name <Class:RenderWithLayoutMatcher>
+# wrong constant name <Class:RescueFromMatcher>
+# wrong constant name <Class:RespondWithMatcher>
+# wrong constant name <Class:RouteMatcher>
+# wrong constant name <Class:RouteParams>
+# wrong constant name <Class:SessionStore>
+# wrong constant name <Class:SetFlashMatcher>
+# wrong constant name <Class:SetSessionMatcher>
+# wrong constant name <Class:SetSessionOrFlashMatcher>
 # wrong constant name filter_param
 # wrong constant name permit
 # wrong constant name redirect_to
@@ -22615,7 +22652,214 @@
 # wrong constant name use_after_action
 # wrong constant name use_around_action
 # wrong constant name use_before_action
+# wrong constant name callback_type
+# wrong constant name callbacks
+# wrong constant name controller
+# wrong constant name controller_class
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name kind
+# wrong constant name matches?
+# wrong constant name method_name
 # wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name <static-init>
+# wrong constant name controller
+# wrong constant name controller=
+# wrong constant name empty?
+# wrong constant name has_key?
+# wrong constant name has_value?
+# wrong constant name name
+# wrong constant name use_now!
+# wrong constant name <static-init>
+# wrong constant name future
+# wrong constant name now
+# wrong constant name <Class:ActionNotDefinedError>
+# wrong constant name <Class:CompositeParametersDoubleRegistry>
+# wrong constant name <Class:ParametersDoubleRegistry>
+# wrong constant name <Class:VerbNotDefinedError>
+# wrong constant name action
+# wrong constant name actual_permitted_parameter_names
+# wrong constant name add_params
+# wrong constant name context
+# wrong constant name controller
+# wrong constant name default_verb
+# wrong constant name description
+# wrong constant name double_collections_by_parameter_name
+# wrong constant name ensure_action_and_verb_present!
+# wrong constant name expectation
+# wrong constant name expected_permitted_parameter_names
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name for
+# wrong constant name format_parameter_names
+# wrong constant name in_context
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name on
+# wrong constant name parameter_names_as_sentence
+# wrong constant name parameters_double_registry
+# wrong constant name reality
+# wrong constant name request_params
+# wrong constant name stubbed_params=
+# wrong constant name subparameter_name
+# wrong constant name unpermitted_parameter_names
+# wrong constant name verb
+# wrong constant name <static-init>
+# wrong constant name parameters_double_registries
+# wrong constant name permitted_parameter_names
+# wrong constant name register
+# wrong constant name <static-init>
+# wrong constant name double_collections_by_parameter_name
+# wrong constant name initialize
+# wrong constant name params
+# wrong constant name permitted_parameter_names
+# wrong constant name register
+# wrong constant name <static-init>
+# wrong constant name permitted_parameter_names_within
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name in_context
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name in_context
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name in_context
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name <static-init>
+# wrong constant name controller
+# wrong constant name description
+# wrong constant name exception
+# wrong constant name expectation
+# wrong constant name expected_method
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name handler_exists?
+# wrong constant name handlers
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name method_name_matches?
+# wrong constant name rescues_from_exception?
+# wrong constant name with
+# wrong constant name <static-init>
+# wrong constant name correct_status_code?
+# wrong constant name correct_status_code_range?
+# wrong constant name description
+# wrong constant name expectation
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name response_code
+# wrong constant name symbol_to_status_code
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name in_context
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name to
+# wrong constant name <static-init>
+# wrong constant name args
+# wrong constant name controller_and_action_given_as_string?
+# wrong constant name extract_params_from_string
+# wrong constant name initialize
+# wrong constant name normalize
+# wrong constant name normalize_values
+# wrong constant name stringify
+# wrong constant name stringify_params
+# wrong constant name symbolize_or_stringify
+# wrong constant name <static-init>
+# wrong constant name controller
+# wrong constant name controller=
+# wrong constant name empty?
+# wrong constant name has_key?
+# wrong constant name has_value?
+# wrong constant name name
+# wrong constant name <static-init>
+# wrong constant name <Class:QualifierOrderError>
+# wrong constant name []
+# wrong constant name description
+# wrong constant name expected_value
+# wrong constant name failure_message
+# wrong constant name failure_message_for_should
+# wrong constant name failure_message_for_should_not
+# wrong constant name failure_message_when_negated
+# wrong constant name in_context
+# wrong constant name key
+# wrong constant name matches?
+# wrong constant name now
+# wrong constant name to
+# wrong constant name underlying_matcher
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name []
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_for_should
+# wrong constant name failure_message_for_should_not
+# wrong constant name failure_message_when_negated
+# wrong constant name in_context
+# wrong constant name matches?
+# wrong constant name to
+# wrong constant name underlying_matcher
+# wrong constant name <static-init>
+# wrong constant name []
+# wrong constant name context
+# wrong constant name controller
+# wrong constant name description
+# wrong constant name expected_value
+# wrong constant name failure_message
+# wrong constant name failure_message_for_should
+# wrong constant name failure_message_for_should_not
+# wrong constant name failure_message_when_negated
+# wrong constant name in_context
+# wrong constant name initialize
+# wrong constant name key
+# wrong constant name matches?
+# wrong constant name store
+# wrong constant name to
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <Class:AllowValueMatcher>
+# wrong constant name <Class:CouldNotDetermineValueOutsideOfArray>
+# wrong constant name <Class:CouldNotSetPasswordError>
+# wrong constant name <Class:DisallowValueMatcher>
+# wrong constant name <Class:HaveSecurePasswordMatcher>
+# wrong constant name <Class:Helpers>
+# wrong constant name <Class:NonNullableBooleanError>
+# wrong constant name <Class:NumericalityMatchers>
+# wrong constant name <Class:Qualifiers>
+# wrong constant name <Class:ValidateAbsenceOfMatcher>
+# wrong constant name <Class:ValidateAcceptanceOfMatcher>
+# wrong constant name <Class:ValidateConfirmationOfMatcher>
+# wrong constant name <Class:ValidateExclusionOfMatcher>
+# wrong constant name <Class:ValidateInclusionOfMatcher>
+# wrong constant name <Class:ValidateLengthOfMatcher>
+# wrong constant name <Class:ValidateNumericalityOfMatcher>
+# wrong constant name <Class:ValidatePresenceOfMatcher>
+# wrong constant name <Class:ValidationMatcher>
+# wrong constant name <Class:Validator>
 # wrong constant name allow_value
 # wrong constant name allow_values
 # wrong constant name have_secure_password
@@ -22627,7 +22871,346 @@
 # wrong constant name validate_length_of
 # wrong constant name validate_numericality_of
 # wrong constant name validate_presence_of
+# wrong constant name <Class:AttributeChangedValueError>
+# wrong constant name <Class:AttributeDoesNotExistError>
+# wrong constant name <Class:AttributeSetter>
+# wrong constant name <Class:AttributeSetterAndValidator>
+# wrong constant name <Class:AttributeSetters>
+# wrong constant name <Class:AttributeSettersAndValidators>
+# wrong constant name <Class:SuccessfulCheck>
+# wrong constant name <Class:SuccessfulSetting>
+# wrong constant name _after_setting_value
+# wrong constant name after_setting_value_callback
+# wrong constant name attribute_changed_value_message=
+# wrong constant name attribute_to_check_message_against
+# wrong constant name attribute_to_set
+# wrong constant name context
+# wrong constant name description
+# wrong constant name does_not_match?
+# wrong constant name expected_message
+# wrong constant name expects_custom_validation_message?
+# wrong constant name expects_strict?
+# wrong constant name failure_message
+# wrong constant name failure_message_preface=
+# wrong constant name failure_message_when_negated
+# wrong constant name for
+# wrong constant name initialize
+# wrong constant name instance
+# wrong constant name last_attribute_setter_used
+# wrong constant name last_value_set
+# wrong constant name matches?
+# wrong constant name model
+# wrong constant name on
+# wrong constant name options
+# wrong constant name result
+# wrong constant name simple_description
+# wrong constant name strict
+# wrong constant name values_to_preset
+# wrong constant name values_to_preset=
+# wrong constant name values_to_set
+# wrong constant name with_message
+# wrong constant name attribute_name
+# wrong constant name attribute_name=
+# wrong constant name matcher_name
+# wrong constant name matcher_name=
+# wrong constant name model
+# wrong constant name model=
+# wrong constant name successful?
+# wrong constant name value_read
+# wrong constant name value_read=
+# wrong constant name value_written
+# wrong constant name value_written=
 # wrong constant name <static-init>
+# wrong constant name attribute_name
+# wrong constant name attribute_name=
+# wrong constant name model
+# wrong constant name model=
+# wrong constant name successful?
+# wrong constant name value
+# wrong constant name value=
+# wrong constant name <static-init>
+# wrong constant name after_set_callback
+# wrong constant name args
+# wrong constant name attribute_changed_value?
+# wrong constant name attribute_name
+# wrong constant name check
+# wrong constant name checked?
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name initialize
+# wrong constant name matcher_name
+# wrong constant name object
+# wrong constant name result_of_checking
+# wrong constant name result_of_setting
+# wrong constant name run
+# wrong constant name run!
+# wrong constant name set
+# wrong constant name set!
+# wrong constant name set?
+# wrong constant name successful?
+# wrong constant name successfully_checked?
+# wrong constant name successfully_set?
+# wrong constant name unsuccessful?
+# wrong constant name unsuccessfully_checked?
+# wrong constant name value_read
+# wrong constant name value_written
+# wrong constant name <static-init>
+# wrong constant name set
+# wrong constant name after_setting_value_callback
+# wrong constant name allow_value_matcher
+# wrong constant name attribute_name
+# wrong constant name attribute_setter
+# wrong constant name attribute_setter_description
+# wrong constant name attribute_to_check_message_against
+# wrong constant name context
+# wrong constant name expected_message
+# wrong constant name expects_strict?
+# wrong constant name ignore_interference_by_writer
+# wrong constant name initialize
+# wrong constant name instance
+# wrong constant name validator
+# wrong constant name value
+# wrong constant name <static-init>
+# uninitialized constant #<Class:0x000055cbcba534e8>::Elem
+# wrong constant name each
+# wrong constant name first_failing
+# wrong constant name initialize
+# wrong constant name tuples
+# wrong constant name <static-init>
+# uninitialized constant #<Class:0x000055cbcba4f690>::Elem
+# wrong constant name each
+# wrong constant name first_failing
+# wrong constant name first_passing
+# wrong constant name initialize
+# wrong constant name tuples
+# wrong constant name <static-init>
+# wrong constant name successful?
+# wrong constant name <static-init>
+# wrong constant name successful?
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name model
+# wrong constant name model=
+# wrong constant name <static-init>
+# wrong constant name create
+# wrong constant name _after_setting_value
+# wrong constant name allow_matcher
+# wrong constant name attribute_changed_value_message=
+# wrong constant name attribute_to_set
+# wrong constant name description
+# wrong constant name does_not_match?
+# wrong constant name expects_strict?
+# wrong constant name failure_message
+# wrong constant name failure_message_preface
+# wrong constant name failure_message_preface=
+# wrong constant name failure_message_when_negated
+# wrong constant name for
+# wrong constant name ignore_interference_by_writer
+# wrong constant name ignoring_interference_by_writer
+# wrong constant name initialize
+# wrong constant name last_attribute_setter_used
+# wrong constant name last_value_set
+# wrong constant name matches?
+# wrong constant name model
+# wrong constant name on
+# wrong constant name simple_description
+# wrong constant name strict
+# wrong constant name values_to_preset=
+# wrong constant name with_message
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name subject
+# wrong constant name validate
+# wrong constant name <static-init>
+# wrong constant name default_error_message
+# wrong constant name format_validation_errors
+# wrong constant name pretty_error_messages
+# wrong constant name <static-init>
+# wrong constant name attribute
+# wrong constant name attribute=
+# wrong constant name <static-init>
+# wrong constant name create
+# wrong constant name <Class:ComparisonMatcher>
+# wrong constant name <Class:EvenNumberMatcher>
+# wrong constant name <Class:NumericTypeMatcher>
+# wrong constant name <Class:OddNumberMatcher>
+# wrong constant name <Class:OnlyIntegerMatcher>
+# wrong constant name comparison_description
+# wrong constant name for
+# wrong constant name initialize
+# wrong constant name simple_description
+# wrong constant name with_message
+# wrong constant name <static-init>
+# wrong constant name simple_description
+# wrong constant name wrap_disallow_value_matcher
+# wrong constant name <static-init>
+# wrong constant name allowed_type_adjective
+# wrong constant name allowed_type_name
+# wrong constant name attribute
+# wrong constant name diff_to_compare
+# wrong constant name disallowed_value
+# wrong constant name does_not_match?
+# wrong constant name expects_custom_validation_message?
+# wrong constant name expects_strict?
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name ignore_interference_by_writer
+# wrong constant name ignoring_interference_by_writer
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name on
+# wrong constant name strict
+# wrong constant name with_message
+# wrong constant name wrap_disallow_value_matcher
+# wrong constant name <static-init>
+# wrong constant name simple_description
+# wrong constant name wrap_disallow_value_matcher
+# wrong constant name <static-init>
+# wrong constant name simple_description
+# wrong constant name wrap_disallow_value_matcher
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <Class:AllowNil>
+# wrong constant name <Class:IgnoreInterferenceByWriter>
+# wrong constant name <Class:IgnoringInterferenceByWriter>
+# wrong constant name allow_nil
+# wrong constant name expects_to_allow_nil?
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name always?
+# wrong constant name changed?
+# wrong constant name condition
+# wrong constant name considering?
+# wrong constant name default_to
+# wrong constant name initialize
+# wrong constant name never?
+# wrong constant name set
+# wrong constant name setting
+# wrong constant name <static-init>
+# wrong constant name ignore_interference_by_writer
+# wrong constant name ignoring_interference_by_writer
+# wrong constant name initialize
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name simple_description
+# wrong constant name <static-init>
+# wrong constant name simple_description
+# wrong constant name <static-init>
+# wrong constant name confirmation_attribute
+# wrong constant name simple_description
+# wrong constant name <static-init>
+# wrong constant name in_array
+# wrong constant name in_range
+# wrong constant name simple_description
+# wrong constant name <static-init>
+# wrong constant name allow_nil
+# wrong constant name expects_to_allow_nil?
+# wrong constant name in_array
+# wrong constant name in_range
+# wrong constant name simple_description
+# wrong constant name with_high_message
+# wrong constant name with_low_message
+# wrong constant name with_message
+# wrong constant name <static-init>
+# wrong constant name allow_nil
+# wrong constant name is_at_least
+# wrong constant name is_at_most
+# wrong constant name is_equal_to
+# wrong constant name simple_description
+# wrong constant name with_long_message
+# wrong constant name with_message
+# wrong constant name with_short_message
+# wrong constant name <static-init>
+# wrong constant name allow_nil
+# wrong constant name description
+# wrong constant name diff_to_compare
+# wrong constant name does_not_match?
+# wrong constant name even
+# wrong constant name expects_custom_validation_message?
+# wrong constant name expects_strict?
+# wrong constant name expects_to_allow_nil?
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name given_numeric_column?
+# wrong constant name initialize
+# wrong constant name is_equal_to
+# wrong constant name is_greater_than
+# wrong constant name is_greater_than_or_equal_to
+# wrong constant name is_less_than
+# wrong constant name is_less_than_or_equal_to
+# wrong constant name is_other_than
+# wrong constant name matches?
+# wrong constant name odd
+# wrong constant name on
+# wrong constant name only_integer
+# wrong constant name simple_description
+# wrong constant name strict
+# wrong constant name with_message
+# wrong constant name <static-init>
+# wrong constant name initialize
+# wrong constant name simple_description
+# wrong constant name <static-init>
+# wrong constant name <Class:BuildDescription>
+# wrong constant name allow_blank
+# wrong constant name allow_blank_does_not_match?
+# wrong constant name allow_blank_matches?
+# wrong constant name allow_value_matcher
+# wrong constant name allows_value_of
+# wrong constant name attribute
+# wrong constant name context
+# wrong constant name description
+# wrong constant name disallow_value_matcher
+# wrong constant name disallows_value_of
+# wrong constant name does_not_match?
+# wrong constant name expects_custom_validation_message?
+# wrong constant name expects_strict?
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name last_submatcher_run
+# wrong constant name matches?
+# wrong constant name model
+# wrong constant name on
+# wrong constant name strict
+# wrong constant name subject
+# wrong constant name with_message
+# wrong constant name call
+# wrong constant name initialize
+# wrong constant name main_description
+# wrong constant name matcher
+# wrong constant name <static-init>
+# wrong constant name call
+# wrong constant name <static-init>
+# wrong constant name all_formatted_validation_error_messages
+# wrong constant name attribute
+# wrong constant name call
+# wrong constant name captured_validation_exception?
+# wrong constant name context
+# wrong constant name has_messages?
+# wrong constant name initialize
+# wrong constant name record
+# wrong constant name type_of_message_matched?
+# wrong constant name validation_exception_message
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <Class:AcceptNestedAttributesForMatcher>
+# wrong constant name <Class:AssociationMatcher>
+# wrong constant name <Class:AssociationMatchers>
+# wrong constant name <Class:DefineEnumForMatcher>
+# wrong constant name <Class:HaveAttachedMatcher>
+# wrong constant name <Class:HaveDbColumnMatcher>
+# wrong constant name <Class:HaveDbIndexMatcher>
+# wrong constant name <Class:HaveImplicitOrderColumnMatcher>
+# wrong constant name <Class:HaveReadonlyAttributeMatcher>
+# wrong constant name <Class:HaveRichTextMatcher>
+# wrong constant name <Class:HaveSecureTokenMatcher>
+# wrong constant name <Class:SerializeMatcher>
+# wrong constant name <Class:Uniqueness>
+# wrong constant name <Class:ValidateUniquenessOfMatcher>
 # wrong constant name accept_nested_attributes_for
 # wrong constant name belong_to
 # wrong constant name define_enum_for
@@ -22644,6 +23227,429 @@
 # wrong constant name have_secure_token
 # wrong constant name serialize
 # wrong constant name validate_uniqueness_of
+# wrong constant name allow_destroy
+# wrong constant name allow_destroy_correct?
+# wrong constant name config
+# wrong constant name description
+# wrong constant name exists?
+# wrong constant name expectation
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name limit
+# wrong constant name limit_correct?
+# wrong constant name matches?
+# wrong constant name model_class
+# wrong constant name model_config
+# wrong constant name should_or_should_not
+# wrong constant name update_only
+# wrong constant name update_only_correct?
+# wrong constant name verify_option_is_correct
+# wrong constant name <static-init>
+# wrong constant name actual_foreign_key
+# wrong constant name add_submatcher
+# wrong constant name associated_class
+# wrong constant name association_exists?
+# wrong constant name autosave
+# wrong constant name autosave_correct?
+# wrong constant name belongs_foreign_key_missing?
+# wrong constant name belongs_to_required_by_default?
+# wrong constant name class_exists?
+# wrong constant name class_has_foreign_key?
+# wrong constant name class_name
+# wrong constant name class_name_correct?
+# wrong constant name column_names_for
+# wrong constant name conditions
+# wrong constant name conditions_correct?
+# wrong constant name counter_cache
+# wrong constant name dependent
+# wrong constant name description
+# wrong constant name expectation
+# wrong constant name failing_submatchers
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name foreign_key_correct?
+# wrong constant name foreign_key_exists?
+# wrong constant name foreign_key_failure_message
+# wrong constant name foreign_key_reflection
+# wrong constant name has_column?
+# wrong constant name has_foreign_key_missing?
+# wrong constant name index_errors
+# wrong constant name index_errors_correct?
+# wrong constant name initialize
+# wrong constant name inverse_of
+# wrong constant name join_table
+# wrong constant name join_table_correct?
+# wrong constant name join_table_matcher
+# wrong constant name join_table_name
+# wrong constant name macro
+# wrong constant name macro_correct?
+# wrong constant name macro_description
+# wrong constant name macro_supports_primary_key?
+# wrong constant name matches?
+# wrong constant name missing
+# wrong constant name missing_options
+# wrong constant name missing_options_for_failing_submatchers
+# wrong constant name model_class
+# wrong constant name name
+# wrong constant name option_verifier
+# wrong constant name optional
+# wrong constant name options
+# wrong constant name order
+# wrong constant name polymorphic?
+# wrong constant name primary_key_correct?
+# wrong constant name primary_key_exists?
+# wrong constant name reflection
+# wrong constant name reflector
+# wrong constant name remove_submatcher
+# wrong constant name required
+# wrong constant name source
+# wrong constant name subject
+# wrong constant name submatchers
+# wrong constant name submatchers_match?
+# wrong constant name through
+# wrong constant name through?
+# wrong constant name touch
+# wrong constant name touch_correct?
+# wrong constant name validate
+# wrong constant name validate_correct?
+# wrong constant name validate_foreign_key
+# wrong constant name validate_inverse_of_through_association
+# wrong constant name with_foreign_key
+# wrong constant name with_primary_key
+# wrong constant name without_validating_presence
+# wrong constant name <static-init>
+# wrong constant name <Class:CounterCacheMatcher>
+# wrong constant name <Class:DependentMatcher>
+# wrong constant name <Class:InverseOfMatcher>
+# wrong constant name <Class:JoinTableMatcher>
+# wrong constant name <Class:ModelReflection>
+# wrong constant name <Class:ModelReflector>
+# wrong constant name <Class:OptionVerifier>
+# wrong constant name <Class:OptionalMatcher>
+# wrong constant name <Class:OrderMatcher>
+# wrong constant name <Class:RequiredMatcher>
+# wrong constant name <Class:SourceMatcher>
+# wrong constant name <Class:ThroughMatcher>
+# wrong constant name counter_cache
+# wrong constant name counter_cache=
+# wrong constant name description
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name missing_option=
+# wrong constant name name
+# wrong constant name name=
+# wrong constant name option_verifier
+# wrong constant name subject
+# wrong constant name subject=
+# wrong constant name <static-init>
+# wrong constant name dependent
+# wrong constant name dependent=
+# wrong constant name description
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name missing_option=
+# wrong constant name name
+# wrong constant name name=
+# wrong constant name subject
+# wrong constant name subject=
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name initialize
+# wrong constant name inverse_of
+# wrong constant name inverse_of=
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name missing_option=
+# wrong constant name name
+# wrong constant name name=
+# wrong constant name option_verifier
+# wrong constant name subject
+# wrong constant name subject=
+# wrong constant name <static-init>
+# wrong constant name associated_class
+# wrong constant name association_foreign_key
+# wrong constant name association_matcher
+# wrong constant name connection
+# wrong constant name failure_message
+# wrong constant name foreign_key
+# wrong constant name initialize
+# wrong constant name join_table_exists?
+# wrong constant name join_table_has_correct_columns?
+# wrong constant name join_table_name
+# wrong constant name join_table_option_correct?
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name model_class
+# wrong constant name name
+# wrong constant name option_verifier
+# wrong constant name options
+# wrong constant name reflector
+# wrong constant name <static-init>
+# wrong constant name associated_class
+# wrong constant name association_foreign_key
+# wrong constant name association_relation
+# wrong constant name foreign_key
+# wrong constant name has_and_belongs_to_many_name
+# wrong constant name initialize
+# wrong constant name join_table_name
+# wrong constant name polymorphic?
+# wrong constant name reflection
+# wrong constant name subject
+# wrong constant name through?
+# wrong constant name validate_inverse_of_through_association!
+# wrong constant name <static-init>
+# wrong constant name associated_class
+# wrong constant name association_foreign_key
+# wrong constant name association_relation
+# wrong constant name build_relation_with_clause
+# wrong constant name extract_relation_clause_from
+# wrong constant name foreign_key
+# wrong constant name has_and_belongs_to_many_name
+# wrong constant name initialize
+# wrong constant name join_table_name
+# wrong constant name model_class
+# wrong constant name name
+# wrong constant name polymorphic?
+# wrong constant name reflect_on_association
+# wrong constant name reflection
+# wrong constant name subject
+# wrong constant name through?
+# wrong constant name validate_inverse_of_through_association!
+# wrong constant name value_as_sql
+# wrong constant name <static-init>
+# wrong constant name actual_value_for
+# wrong constant name actual_value_for_class_name
+# wrong constant name actual_value_for_option
+# wrong constant name actual_value_for_relation_clause
+# wrong constant name correct_for?
+# wrong constant name correct_for_boolean?
+# wrong constant name correct_for_constant?
+# wrong constant name correct_for_hash?
+# wrong constant name correct_for_relation_clause?
+# wrong constant name correct_for_string?
+# wrong constant name expected_value_for
+# wrong constant name expected_value_for_constant
+# wrong constant name expected_value_for_relation_clause
+# wrong constant name initialize
+# wrong constant name reflection
+# wrong constant name reflector
+# wrong constant name type_cast
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name missing_option=
+# wrong constant name name
+# wrong constant name name=
+# wrong constant name option_verifier
+# wrong constant name order
+# wrong constant name order=
+# wrong constant name subject
+# wrong constant name subject=
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name missing_option=
+# wrong constant name name
+# wrong constant name name=
+# wrong constant name option_verifier
+# wrong constant name source
+# wrong constant name source=
+# wrong constant name subject
+# wrong constant name subject=
+# wrong constant name <static-init>
+# wrong constant name association_set_properly?
+# wrong constant name description
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name missing_option
+# wrong constant name missing_option=
+# wrong constant name name
+# wrong constant name name=
+# wrong constant name option_verifier
+# wrong constant name subject
+# wrong constant name subject=
+# wrong constant name through
+# wrong constant name through=
+# wrong constant name through_association_correct?
+# wrong constant name through_association_exists?
+# wrong constant name through_reflection
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name backed_by_column_of_type
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name with
+# wrong constant name with_prefix
+# wrong constant name with_suffix
+# wrong constant name with_values
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name expectation
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name name
+# wrong constant name <static-init>
+# wrong constant name <Class:DecoratedColumn>
+# wrong constant name actual_primary?
+# wrong constant name actual_scale
+# wrong constant name column_exists?
+# wrong constant name correct_column_type?
+# wrong constant name correct_default?
+# wrong constant name correct_limit?
+# wrong constant name correct_null?
+# wrong constant name correct_precision?
+# wrong constant name correct_primary?
+# wrong constant name correct_scale?
+# wrong constant name description
+# wrong constant name expectation
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matched_column
+# wrong constant name matches?
+# wrong constant name model_class
+# wrong constant name of_type
+# wrong constant name validate_options
+# wrong constant name with_options
+# wrong constant name initialize
+# wrong constant name model
+# wrong constant name primary?
+# wrong constant name type_cast_default
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name unique
+# wrong constant name <static-init>
+# wrong constant name <Class:PrimaryCheckFailedError>
+# wrong constant name <Class:SecondaryCheckFailedError>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name <static-init>
+# wrong constant name description
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name ignoring_check_for_db_index
+# wrong constant name initialize
+# wrong constant name matches?
+# wrong constant name token_attribute
+# wrong constant name <static-init>
+# wrong constant name as
+# wrong constant name as_instance_of
+# wrong constant name attribute_is_serialized?
+# wrong constant name class_valid?
+# wrong constant name description
+# wrong constant name expectation
+# wrong constant name failure_message
+# wrong constant name failure_message_when_negated
+# wrong constant name initialize
+# wrong constant name instance_class_valid?
+# wrong constant name matches?
+# wrong constant name model
+# wrong constant name model_class
+# wrong constant name serialization_coder
+# wrong constant name serialization_valid?
+# wrong constant name type_valid?
+# wrong constant name <static-init>
+# wrong constant name <Class:Model>
+# wrong constant name <Class:Namespace>
+# wrong constant name <Class:TestModelCreator>
+# wrong constant name <Class:TestModels>
+# wrong constant name already_exists?
+# wrong constant name initialize
+# wrong constant name name
+# wrong constant name namespace
+# wrong constant name next
+# wrong constant name symlink_to
+# wrong constant name <static-init>
+# wrong constant name next_unique_copy_of
+# wrong constant name clear
+# wrong constant name constant
+# wrong constant name has?
+# wrong constant name initialize
+# wrong constant name set
+# wrong constant name <static-init>
+# wrong constant name create
+# wrong constant name initialize
+# wrong constant name model_name
+# wrong constant name namespace
+# wrong constant name <static-init>
+# wrong constant name create
+# wrong constant name <static-init>
+# wrong constant name create
+# wrong constant name remove_all
+# wrong constant name root_namespace
+# wrong constant name <static-init>
+# wrong constant name <Class:AttributeSetters>
+# wrong constant name <Class:ExistingRecordInvalid>
+# wrong constant name <Class:NonCaseSwappableValueError>
+# wrong constant name allow_nil
+# wrong constant name case_insensitive
+# wrong constant name does_not_match?
+# wrong constant name expects_to_allow_nil?
+# wrong constant name ignoring_case_sensitivity
+# wrong constant name matches?
+# wrong constant name scoped_to
+# wrong constant name simple_description
+# wrong constant name +
+# wrong constant name <<
+# uninitialized constant #<Class:0x000055cbcaedb728>::Elem
+# wrong constant name each
+# wrong constant name last
+# wrong constant name <static-init>
+# wrong constant name underlying_exception
+# wrong constant name underlying_exception=
+# wrong constant name <static-init>
+# wrong constant name attribute
+# wrong constant name attribute=
+# wrong constant name model
+# wrong constant name model=
+# wrong constant name value
+# wrong constant name value=
+# wrong constant name <static-init>
+# wrong constant name <static-init>
 # wrong constant name <static-init>
 # wrong constant name integrate
 # wrong constant name integrations
@@ -23175,27 +24181,27 @@
 # wrong constant name T.noreturn
 # wrong constant name T.noreturn
 # wrong constant name T.untyped
-# uninitialized constant #<Class:0x000055dbae6cefa0>::ACTIONS
+# uninitialized constant Team(Table doesn't exist)::ACTIONS
 # Did you mean?  Team::ACTIONS
-# uninitialized constant #<Class:0x000055dbae6cefa0>::CALLBACKS
+# uninitialized constant Team(Table doesn't exist)::CALLBACKS
 # Did you mean?  Team::Callbacks
 #                Team::Callback
 #                Team::CALLBACKS
-# uninitialized constant #<Class:0x000055dbae6cefa0>::CALLBACK_FILTER_TYPES
+# uninitialized constant Team(Table doesn't exist)::CALLBACK_FILTER_TYPES
 # Did you mean?  Team::CALLBACK_FILTER_TYPES
-# uninitialized constant #<Class:0x000055dbae6cefa0>::CALL_COMPILABLE_REGEXP
+# uninitialized constant Team(Table doesn't exist)::CALL_COMPILABLE_REGEXP
 # Did you mean?  Team::CALL_COMPILABLE_REGEXP
 # wrong constant name <Class:GeneratedAssociationMethods>
 # wrong constant name <Class:GeneratedAttributeMethods>
-# uninitialized constant #<Class:0x000055dbae6cefa0>::MAX_PASSWORD_LENGTH_ALLOWED
+# uninitialized constant Team(Table doesn't exist)::MAX_PASSWORD_LENGTH_ALLOWED
 # Did you mean?  Team::MAX_PASSWORD_LENGTH_ALLOWED
-# uninitialized constant #<Class:0x000055dbae6cefa0>::MINIMUM_TOKEN_LENGTH
+# uninitialized constant Team(Table doesn't exist)::MINIMUM_TOKEN_LENGTH
 # Did you mean?  Team::MINIMUM_TOKEN_LENGTH
-# uninitialized constant #<Class:0x000055dbae6cefa0>::NAME_COMPILABLE_REGEXP
+# uninitialized constant Team(Table doesn't exist)::NAME_COMPILABLE_REGEXP
 # Did you mean?  Team::NAME_COMPILABLE_REGEXP
-# uninitialized constant #<Class:0x000055dbae6cefa0>::RESTRICTED_CLASS_METHODS
+# uninitialized constant Team(Table doesn't exist)::RESTRICTED_CLASS_METHODS
 # Did you mean?  Team::RESTRICTED_CLASS_METHODS
-# uninitialized constant #<Class:0x000055dbae6cefa0>::UNASSIGNABLE_KEYS
+# uninitialized constant Team(Table doesn't exist)::UNASSIGNABLE_KEYS
 # Did you mean?  Team::UNASSIGNABLE_KEYS
 # wrong constant name <static-init>
 # wrong constant name <static-init>
@@ -23266,8 +24272,8 @@
 # uninitialized constant Temple::Filters::StringSplitter::SyntaxChecker::EXPR_MID
 # Did you mean?  Temple::Filters::StringSplitter::SyntaxChecker::EXPR_END
 # uninitialized constant Temple::Filters::StringSplitter::SyntaxChecker::EXPR_NONE
-# Did you mean?  Temple::Filters::StringSplitter::SyntaxChecker::EXPR_DOT
-#                Temple::Filters::StringSplitter::SyntaxChecker::EXPR_END
+# Did you mean?  Temple::Filters::StringSplitter::SyntaxChecker::EXPR_END
+#                Temple::Filters::StringSplitter::SyntaxChecker::EXPR_DOT
 #                Temple::Filters::StringSplitter::SyntaxChecker::EXPR_FNAME
 # uninitialized constant Temple::Filters::StringSplitter::SyntaxChecker::EXPR_VALUE
 # uninitialized constant Temple::Filters::StringSplitter::SyntaxChecker::PARSER_EVENTS
@@ -23363,8 +24369,8 @@
 # uninitialized constant Temple::StaticAnalyzer::SyntaxChecker::EXPR_MID
 # Did you mean?  Temple::StaticAnalyzer::SyntaxChecker::EXPR_END
 # uninitialized constant Temple::StaticAnalyzer::SyntaxChecker::EXPR_NONE
-# Did you mean?  Temple::StaticAnalyzer::SyntaxChecker::EXPR_DOT
-#                Temple::StaticAnalyzer::SyntaxChecker::EXPR_END
+# Did you mean?  Temple::StaticAnalyzer::SyntaxChecker::EXPR_END
+#                Temple::StaticAnalyzer::SyntaxChecker::EXPR_DOT
 #                Temple::StaticAnalyzer::SyntaxChecker::EXPR_FNAME
 # uninitialized constant Temple::StaticAnalyzer::SyntaxChecker::EXPR_VALUE
 # uninitialized constant Temple::StaticAnalyzer::SyntaxChecker::PARSER_EVENTS
@@ -23785,8 +24791,8 @@
 # uninitialized constant WebSocket::Driver::Client::OPENING_OPCODES
 # uninitialized constant WebSocket::Driver::Client::PACK_FORMATS
 # uninitialized constant WebSocket::Driver::Client::RSV1
-# Did you mean?  WebSocket::Driver::Client::RSV3
-#                WebSocket::Driver::Client::RSV2
+# Did you mean?  WebSocket::Driver::Client::RSV2
+#                WebSocket::Driver::Client::RSV3
 # uninitialized constant WebSocket::Driver::Client::RSV2
 # Did you mean?  WebSocket::Driver::Client::RSV3
 #                WebSocket::Driver::Client::RSV1
